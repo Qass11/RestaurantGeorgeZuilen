@@ -50,7 +50,7 @@
 </div>
 
 <div class="container border-bottom">
-    Contact page
+    Hoi ik ben Dani, dit is mijn contact pagina.
 </div>
 
 <div class="container no-border text-center">

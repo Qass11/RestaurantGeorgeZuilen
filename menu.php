@@ -50,6 +50,8 @@
     </div>
 
     <div class="container border-bottom menu">
+        <img class="menu-image" src="https://www.we-heart.com/upload-images/sangeorgeamsterdam2@2x.jpg">
+
         <div class="row">
             <div class="col-sm-12 col-md">
                 <h4>Head name</h4>
@@ -150,6 +152,7 @@
                 </ul>
             </div>
         </div>
+
     </div>
 
     <div class="container border-bottom text-center">

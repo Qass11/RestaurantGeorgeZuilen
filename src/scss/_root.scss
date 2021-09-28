@@ -1,0 +1,74 @@
+:root {
+  --fontBase: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --fontSize: 15px;
+
+  --colorBackground: 255, 255, 255;
+  --colorText: 68, 68, 68;
+
+    --colorPrimary: #ca301e;
+    --colorPrimaryHover: #a63629;
+    --colorSecondary: 108, 117, 125;
+    --colorSecondaryHover: 84, 91, 98;
+    --colorDarker: #333333;
+    --colorSuccess: #2ecc71;
+    --colorSuccessHover: #27ae60;
+    --colorDanger: #e74c3c;
+    --colorDangerHover: #c0392b;
+    --colorWarning: #f1c40f;
+    --colorWarningHover: #e0a800;
+    --colorInfo: #3498db;
+    --colorInfoHover: #2980b9;
+    --colorLight: #f8f9fa;
+    --colorLightHover: #e2e6ea;
+    --colorDark: #2d3436;
+    --colorDarkHover: #23272b;
+    --colorLink: #007bff;
+    --colorLinkHover: #0056b3;
+
+    --cardsBackground: 255, 255, 255;
+    --cardsCodeBackground: 249, 249, 249;
+    --cardsShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --cardsBorderRadius: 5px;
+    --cardsTitlePadding: 0 20px 0 20px;
+    --cardsCodePadding: 25px 30px 5px 30px;
+    --cardsPadding: 20px;
+    --cardsDivider: 1px;
+    --cardsBorderColor: 240, 240, 240;
+    --cardsColorTitle: 25, 26, 28;
+  }
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url('../fonts/AkzidenzGrotesk-Black.woff2') format('woff2'),
+  url('../fonts/AkzidenzGrotesk-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url('../fonts/AkzidenzGrotesk-Light.woff2') format('woff2'),
+  url('../fonts/AkzidenzGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url('../fonts/AkzidenzGrotesk-Roman.woff2') format('woff2'),
+  url('../fonts/AkzidenzGrotesk-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url('../fonts/AkzidenzGrotesk-Bold.woff2') format('woff2'),
+  url('../fonts/AkzidenzGrotesk-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

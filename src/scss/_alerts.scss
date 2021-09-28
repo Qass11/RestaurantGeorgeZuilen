@@ -1,0 +1,229 @@
+.alert {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: 500;
+    vertical-align: middle;
+
+    h3 {
+      margin-top: 0px;
+      margin-bottom: 2px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    i {
+      margin-right: 5px;
+      margin-left: 2px;
+      font-weight: 700;
+      font-size: 20px;
+      vertical-align: middle;
+    }
+
+    .close {
+      float: right;
+      font-weight: 700;
+      background: transparent;
+      border: transparent;
+      line-height: -1;
+      font-size: 20px !important;
+      color: inherit;
+      margin-top: -6px;
+      margin-right: -3px;
+      cursor: pointer;
+
+      i {
+        margin-right: -3px;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:focus {
+        background: transparent;
+        border: transparent;
+        outline: transparent;
+      }
+    }
+
+    &.alert-primary {
+      border-color: rgba(202, 48, 30,.25);
+      background: rgba(202, 48, 30, .3);
+      color: var(--colorPrimaryHover);
+
+      hr {
+        border-top: 1px solid rgba(202, 48, 30,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: var(--colorPrimaryHover);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.alert-secondary {
+      border-color: rgba(108, 117, 125,.25);
+      background: rgba(108, 117, 125, .3);
+      color: rgba(108, 117, 125,1);
+
+      hr {
+        border-top: 1px solid rgba(108, 117, 125,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: rgba(108, 117, 125,1);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.alert-success {
+      border-color: rgba(46, 204, 113,.25);
+      background: rgba(46, 204, 113, .3);
+      color: var(--colorSuccessHover);
+
+      hr {
+        border-top: 1px solid rgba(46, 204, 113,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: var(--colorSuccessHover);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.alert-danger {
+      border-color: rgba(231, 76, 60,.25);
+      background: rgba(231, 76, 60, .3);
+      color: var(--colorDangerHover);
+
+      hr {
+        border-top: 1px solid rgba(231, 76, 60,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: var(--colorDangerHover);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.alert-warning {
+      border-color: rgba(241, 196, 15,.25);
+      background: rgba(241, 196, 15, .3);
+      color: var(--colorWarningHover);
+
+      hr {
+        border-top: 1px solid rgba(241, 196, 15,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: var(--colorWarningHover);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.alert-info {
+      border-color: rgba(52, 152, 219,.25);
+      background: rgba(52, 152, 219, .3);
+      color: var(--colorInfoHover);
+
+      hr {
+        border-top: 1px solid rgba(52, 152, 219,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: var(--colorInfoHover);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.alert-light {
+      border-color: rgba(248, 249, 250,.25);
+      background: rgba(248, 249, 250, .3);
+      color: var(--colorLightHover);
+
+      hr {
+        border-top: 1px solid rgba(248, 249, 250,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: var(--colorLightHover);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.alert-dark {
+      border-color: rgba(45, 52, 54,.25);
+      background: rgba(45, 52, 54, .3);
+      color: var(--colorDarkHover);
+
+      hr {
+        border-top: 1px solid rgba(45, 52, 54,1);
+        border-bottom: 0px;
+        margin-top: 10px;
+      }
+
+      a {
+        color: var(--colorDarkHover);
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }

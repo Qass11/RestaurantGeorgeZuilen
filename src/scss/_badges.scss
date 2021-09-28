@@ -1,0 +1,221 @@
+.badge {
+    display: inline-block;
+    padding: 5px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+    font-size: 12px;
+    color: #fff;
+    background-color: #6c757d;
+    cursor: pointer;
+
+  &.no-margin {
+    margin: 0;
+  }
+
+    &:hover {
+      background-color: #5a6268;
+    }
+
+    &.badge-lg {
+      padding: 8px !important;
+      font-size: 13px !important;
+    }
+
+    &.badge-rnd {
+      border-radius: 25px !important;
+    }
+
+    &.badge-blc {
+      border-radius: 0px !important;
+    }
+
+    &.badge-full {
+      width: calc(100% - 23px);
+    }
+
+    &.badge-sm {
+      padding: 2px !important;
+      font-size: 10px !important;
+    }
+
+    &.badge-primary {
+      color: #fff;
+      background-color: var(--colorPrimary);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorPrimaryHover);
+      }
+    }
+
+    &.badge-outline-primary {
+      color: var(--colorPrimary);
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid var(--colorPrimary);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorPrimary);
+      }
+    }
+
+    &.badge-secondary {
+      color: #fff;
+      background-color: #6c757d;
+
+      &:hover {
+        color: #fff;
+        background-color: #5a6268;
+      }
+    }
+
+    &.badge-outline {
+      color: #6c757d;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid #6c757d;
+
+      &:hover {
+        color: #fff;
+        background: #6c757d;
+      }
+    }
+
+    &.badge-success {
+      color: #fff;
+      background-color: var(--colorSuccess);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorSuccessHover);
+      }
+    }
+
+    &.badge-outline-success {
+      color: var(--colorSuccess);
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid var(--colorSuccess);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorSuccess);
+      }
+    }
+
+    &.badge-danger {
+      color: #fff;
+      background-color: var(--colorDanger);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorDangerHover);
+      }
+    }
+
+    &.badge-outline-danger {
+      color: var(--colorDanger);
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid var(--colorDanger);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorDanger);
+      }
+    }
+
+    &.badge-warning {
+      color: #212529;
+      background-color: var(--colorWarning);
+
+      &:hover {
+        color: #212529;
+        background-color: var(--colorWarningHover);
+      }
+    }
+
+    &.badge-outline-warning {
+      color: var(--colorWarning);
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid var(--colorWarning);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorWarning);
+      }
+    }
+
+    &.badge-info {
+      color: #fff;
+      background-color: var(--colorInfo);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorInfoHover);
+      }
+    }
+
+    &.badge-outline-info {
+      color: var(--colorInfo);
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid var(--colorInfo);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorInfo);
+      }
+    }
+
+    &.badge-light {
+      color: #212529;
+      background-color: var(--colorLight);
+
+      &:hover {
+        color: #212529;
+        background-color: var(--colorLightHover);
+      }
+    }
+
+    &.badge-outline-light {
+      color: var(--colorLight);
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid var(--colorLight);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorLight);
+      }
+    }
+
+    &.badge-dark {
+      color: #fff;
+      background-color: var(--colorDark);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorDarkHover);
+      }
+    }
+
+    &.badge-outline-dark {
+      color: var(--colorDark);
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid var(--colorDark);
+
+      &:hover {
+        color: #fff;
+        background-color: var(--colorDark);
+      }
+    }
+  }

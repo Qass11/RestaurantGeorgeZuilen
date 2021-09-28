@@ -148,6 +148,82 @@ p {
 .container {
   max-width: 1140px;
 
+  &.menu {
+
+    .quote {
+      border: 1px dashed rgba(0,0,0,.7);
+      margin: 20px 0 40px 0;
+      padding: 20px;
+
+      .text {
+        font-family: 'Lora', serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      h3 {
+        display: block;
+        margin: 0 0 10px 0;
+      }
+    }
+
+    h4 {
+      display: inline-block;
+      float: left;
+    }
+
+    p {
+      display: inline-block;
+      float: right;
+      margin: 2.5px 0 0 15px;
+      font-family: 'Lora', serif;
+      font-weight: 400;
+    }
+
+    .extra-info {
+      font-size: 14px;
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    ul {
+      width: 100%;
+      display: block;
+    }
+
+    span.strong {
+      font-weight: 700;
+    }
+
+    ul.leaders {
+      padding: 0;
+      overflow-x: hidden;
+      list-style: none}
+
+    ul.leaders li {
+      margin: 0 0 10px 0;
+      font-family: 'Lora', serif;
+      font-weight: 400;
+    }
+    ul.leaders li:before {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content:
+              ". . . . . . . . . . . . . . . . . . . . "
+              ". . . . . . . . . . . . . . . . . . . . "
+              ". . . . . . . . . . . . . . . . . . . . "
+              ". . . . . . . . . . . . . . . . . . . . "}
+    ul.leaders span:first-child {
+      padding-right: 0.33em;
+      background: white}
+    ul.leaders span + span {
+      float: right;
+      padding-left: 0.33em;
+      background: white}
+  }
+
   &.call-to-action {
     .call-to-action-desc {
       width: 100%;

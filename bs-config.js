@@ -27,7 +27,7 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": false,
-    "proxy": "georgezuilen.test",
+    "proxy": "RestaurantGeorgeZuilen.test",
     "port": 3000,
     "middleware": false,
     "serveStatic": [],
@@ -66,7 +66,7 @@ module.exports = {
     "injectChanges": true,
     "startPath": null,
     "minify": true,
-    "host": "georgezuilen.test",
+    "host": "RestaurantGeorgeZuilen.test",
     "localOnly": false,
     "codeSync": true,
     "timestamps": true,

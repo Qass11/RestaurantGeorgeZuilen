@@ -50,7 +50,14 @@
 </div>
 
 <div class="container border-bottom">
-    Hoi ik ben Dani, dit is mijn contact pagina.
+    <div class="row">
+      <div class="col-lg-7">
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 250px">
+          <iframe src="https://maps.google.com/maps?q=MBO Utrecht, Daltonlaan, Utrecht&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" style="border:0" class="map-filter" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
 </div>
 
 <div class="container border-bottom text-center opening-hours">

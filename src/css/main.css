@@ -1387,4 +1387,30 @@ p {
   object-fit: cover;
 }
 
+.meeting-room img {
+  border-radius: 5px;
+  width: 275px;
+  margin: 0 0 20px 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.meeting-room img:hover {
+  filter: grayscale(100%);
+}
+.meeting-room .prices .row {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Lora", serif;
+}
+.meeting-room .prices .row .col {
+  padding: 10px;
+}
+.meeting-room .prices .row .col span {
+  display: block;
+}
+.meeting-room .prices .row .col span:first-child {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12.5px;
+}
+
 /*# sourceMappingURL=main.css.map */

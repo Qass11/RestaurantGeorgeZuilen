@@ -1142,14 +1142,6 @@ p {
 .container {
   max-width: 1140px;
 }
-.container.menu .menu-image {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-  margin: 0 0 40px 0;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-}
 .container.menu .quote {
   border: 1px dashed rgba(0, 0, 0, 0.7);
   margin: 20px 0 40px 0;
@@ -1213,6 +1205,28 @@ p {
   padding-left: 0.33em;
   background: white;
 }
+.container.call-to-action .call-to-action-menu-one {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(65deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://www.we-heart.com/upload-images/sangeorgeamsterdam2@2x.jpg);
+  background-position: 110%, center center;
+  background-size: auto 100%, cover;
+  background-repeat: no-repeat, no-repeat;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  margin: 0 0 -20px 0;
+}
+.container.call-to-action .call-to-action-menu-one .text-place {
+  padding: 45px 0;
+  text-align: center;
+}
+.container.call-to-action .call-to-action-menu-one .text-place h2 {
+  color: #fff;
+  display: block;
+  margin: 0;
+  font-size: 50px;
+  text-shadow: 4px 3px 0 rgba(0, 0, 0, 0.4);
+}
 .container.call-to-action .call-to-action-desc {
   width: 100%;
   height: 200px;
@@ -1221,6 +1235,7 @@ p {
   background-repeat: no-repeat, no-repeat;
   background-position: 110%, center center;
   border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 .container.call-to-action .call-to-action-desc .text-place {
   padding: 53px 0;

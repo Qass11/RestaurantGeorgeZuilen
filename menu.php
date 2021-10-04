@@ -42,15 +42,15 @@
         </ul>
     </div>
 
-    <div class="container">
-        <div class="alert alert-dismissible fade show text-center" role="alert">
-            <a href="#">Click here for the latest covid-19 updates</a>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="container no-border call-to-action">
+        <div class="call-to-action-menu-one">
+            <div class="text-place">
+                <h2>Dinner</h2>
+            </div>
         </div>
     </div>
 
     <div class="container border-bottom menu">
-        <img class="menu-image" src="https://www.we-heart.com/upload-images/sangeorgeamsterdam2@2x.jpg">
 
         <div class="row">
             <div class="col-sm-12 col-md">

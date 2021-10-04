@@ -3,6 +3,7 @@
 .image-book {
     height: 120px;
     object-fit: cover;
+    object-position: center -240px;
 }
 
 .booktext {

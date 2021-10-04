@@ -11,6 +11,10 @@
 </head>
 <body>
 
+<?php
+include('./src/inc/book-a-table.php');
+?>
+
 <!--    <div class="loader" id="loader">-->
 <!--        <div class="text-loading" id="preloader">-->
 <!--            <h3><span>George</span> Zuilen</h3>-->
@@ -34,7 +38,7 @@
                 <a class="nav-link" href="./book-event.php"><i class="fal fa-glass-cheers fa-fw"></i> Events</a>
             </li>
             <li>
-                <a class="nav-link" href="#"><i class="fal fa-calendar-plus fa-fw"></i> Book a table</a>
+                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#bookATable"><i class="fal fa-calendar-plus fa-fw"></i> Book a table</a>
             </li>
             <li>
                 <a class="nav-link" href="./contact.php"><i class="fal fa-paper-plane fa-fw"></i> Contact</a>

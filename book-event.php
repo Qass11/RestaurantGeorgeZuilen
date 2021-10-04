@@ -66,19 +66,145 @@
     </div>
 
     <div class="container border-bottom">
-        Meeting rooms
+        <div class="row text-center">
+            <div class="col-sm-12 col-md-3 meeting-room">
+                <img src="https://i.imgur.com/0fQZxkZ.png">
+                <h5>The Yacht Room | 30 m<sup>2</sup></h5>
+                <p>
+                    14 persons Board room<br/>
+                    30 persons Theater<br/>
+                </p>
+                <div class="prices">
+                   <div class="row">
+                       <div class="col">
+                           <span>Half day</span>
+                           <span>&euro; 150,00</span>
+                       </div>
+
+                       <div class="col">
+                           <span>Full day</span>
+                           <span>&euro; 250,00</span>
+                       </div>
+                   </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 meeting-room">
+                <img src="https://i.imgur.com/OXXX4an.png">
+                <h5>The Cabine | 25 m<sup>2</sup></h5>
+                <p>
+                    8 persons Board room<br/>
+                    24 persons Theater<br/>
+                </p>
+                <div class="prices">
+                    <div class="row">
+                        <div class="col">
+                            <span>Half day</span>
+                            <span>&euro; 120,00</span>
+                        </div>
+
+                        <div class="col">
+                            <span>Full day</span>
+                            <span>&euro; 200,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 meeting-room">
+                <img src="https://i.imgur.com/l5E14jv.png">
+                <h5>The Anchor Room | 42 m<sup>2</sup></h5>
+                <p>
+                    24 persons Board room<br/>
+                    42 persons Theater<br/>
+                </p>
+                <div class="prices">
+                    <div class="row">
+                        <div class="col">
+                            <span>Half day</span>
+                            <span>&euro; 200,00</span>
+                        </div>
+
+                        <div class="col">
+                            <span>Full day</span>
+                            <span>&euro; 350,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 meeting-room">
+                <img src="https://i.imgur.com/IR7QQHW.png">
+                <h5>The Loft | 36 m<sup>2</sup></h5>
+                <p>
+                    8 persons Board room<br/>
+                    8 persons Theater<br/>
+                </p>
+                <div class="prices">
+                    <div class="row">
+                        <div class="col">
+                            <span>Half day</span>
+                            <span>&euro; 150,00</span>
+                        </div>
+
+                        <div class="col">
+                            <span>Full day</span>
+                            <span>&euro; 250,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container border-bottom">
-        EXCLUSIVE RENTAL OF RESTAURANT & TERRACE
-    </div>
+    <div class="container border-bottom text-center">
+        <div class="row">
+            <div class="col-sm-12 col-md socials">
+                <h2>Our Location.</h2>
+                <p>
+                    We are located in a beautiful location of the MBO Utrecht, near Utrecht Sciene Park, accessible by car, bicycle and public transport.
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-map-marked-alt fa-fw icon-george"></i>
+                        <strong>Location</strong>
+                        Daltonlaan 300, 3584 BK Utrecht
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md socials">
+                <h2>Our Socials.</h2>
+                <p>
+                    Always be the first to know about updates and actions at George Zuilen, follow our social media channels.
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-hashtag fa-fw icon-george"></i>
+                        <strong>Twitter</strong>
+                        @georgezuilen
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md socials">
+                <h2>Contact.</h2>
+                <p>
+                    Have questions or want to discuss certain opportunities with our team? Please feel free to contact us.
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-at fa-fw icon-george"></i>
+                        <strong>E-mail</strong>
+                        hello@georgezuilen.nl
+                    </div>
 
-    <div class="container border-bottom">
-        Some menus
-    </div>
-
-    <div class="container border-bottom">
-        Some extra photos
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-phone-office fa-fw icon-george"></i>
+                        <strong>Phone</strong>
+                        030 12 34 56 7
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container no-border text-center">

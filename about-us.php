@@ -11,6 +11,10 @@
 </head>
 <body>
 
+    <?php
+        include('./src/inc/book-a-table.php');
+    ?>
+
     <!--<div class="loader" id="loader">-->
     <!--    <div class="text-loading" id="preloader">-->
     <!--        <h3><span>George</span> Zuilen</h3>-->

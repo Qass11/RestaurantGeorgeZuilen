@@ -42,20 +42,6 @@
         </ul>
     </div>
 
-    <div class="container">
-        <div class="alert alert-dismissible fade show text-center" role="alert">
-            <a href="#">Click here for the latest covid-19 updates</a>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="alert alert-dismissible fade show text-center" role="alert">
-            <a href="#">Click here for the latest covid-19 updates</a>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </div>
-
     <div class="container border-bottom about-us">
         <div class="row">
             <div class="col-12 col-md-7">
@@ -100,6 +86,126 @@ George Betros bought Harry B’s in 1966 and changed the name to “George’s.�
             </div>
             <div class="col-12 col-md-5">
                 <img src="./src/img/3333333.jpg" class="about-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container border-bottom text-center">
+        <h1>Our Employees</h1>
+        <p class="bottom-space">
+        We at George Zuilen are grateful to our hard working employees every day<br/> for the success they achieve. Below you will see a sampling of our employees.
+        </p>
+        <div class="row">
+            <div class="col-sm-4 col-md">
+                <img src="https://randomuser.me/api/portraits/men/97.jpg" class="img-fluid employee">
+                <h5 class="empname">Employee Name</h4>
+                <p class="function">Function</p>
+            </div>
+
+            <div class="col-sm-4 col-md">
+                <img src="https://uifaces.co/our-content/donated/3799Ffxy.jpeg" class="img-fluid employee">
+                <h5 class="empname">Employee Name</h4>
+                <p class="function">Function</p>
+            </div>
+
+            <div class="col-sm-4 col-md">
+                <img src="https://images.pexels.com/photos/247917/pexels-photo-247917.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb" class="img-fluid employee">
+                <h5 class="empname">Employee Name</h4>
+                <p class="function">Function</p>
+            </div>
+
+            <div class="col-sm-4 col-md">
+                <img src="https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200" class="img-fluid employee">
+                <h5 class="empname">Employee Name</h4>
+                <p class="function">Function</p>
+            </div>
+
+            <div class="col-sm-4 col-md">
+                <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200" class="img-fluid employee">
+                <h5 class="empname">Employee Name</h4>
+                <p class="function">Function</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container border-bottom text-center opening-hours">
+        <h2>Opening Hours.</h2>
+        <p>Every working day you are welcome in our restaurant, below you can see all our opening hours.</p>
+        <div class="row">
+            <div class="col-sm-12 col-md">
+                <i class="fal fa-clock fa-fw icon-george"></i>
+                <p><strong>Maandag</strong></p>
+                <p>10:00 &mdash; 20:00</p>
+            </div>
+            <div class="col-sm-12 col-md">
+                <i class="fal fa-clock fa-fw icon-george"></i>
+                <p><strong>Dinsdag</strong></p>
+                <p>10:00 &mdash; 20:00</p>
+            </div>
+            <div class="col-sm-12 col-md">
+                <i class="fal fa-clock fa-fw icon-george"></i>
+                <p><strong>Woensdag</strong></p>
+                <p>10:00 &mdash; 20:00</p>
+            </div>
+            <div class="col-sm-12 col-md">
+                <i class="fal fa-clock fa-fw icon-george"></i>
+                <p><strong>Donderdag</strong></p>
+                <p>10:00 &mdash; 20:00</p>
+            </div>
+            <div class="col-sm-12 col-md">
+                <i class="fal fa-clock fa-fw icon-george"></i>
+                <p><strong>Vrijdag</strong></p>
+                <p>10:00 &mdash; 20:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container border-bottom text-center">
+        <div class="row">
+            <div class="col-sm-12 col-md socials">
+                <h2>Our Location.</h2>
+                <p>
+                    We are located in a beautiful location of the MBO Utrecht, near Utrecht Sciene Park, accessible by car, bicycle and public transport.
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-map-marked-alt fa-fw icon-george"></i>
+                        <strong>Location</strong>
+                        Daltonlaan 300, 3584 BK Utrecht
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md socials">
+                <h2>Our Socials.</h2>
+                <p>
+                    Always be the first to know about updates and actions at George Zuilen, follow our social media channels.
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-hashtag fa-fw icon-george"></i>
+                        <strong>Twitter</strong>
+                        @georgezuilen
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md socials">
+                <h2>Contact.</h2>
+                <p>
+                    Have questions or want to discuss certain opportunities with our team? Please feel free to contact us.
+                </p>
+                <div class="row">
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-at fa-fw icon-george"></i>
+                        <strong>E-mail</strong>
+                        hello@georgezuilen.nl
+                    </div>
+
+                    <div class="col-sm-12 col-md">
+                        <i class="fal fa-phone-office fa-fw icon-george"></i>
+                        <strong>Phone</strong>
+                        030 12 34 56 7
+                    </div>
+                </div>
             </div>
         </div>
     </div>

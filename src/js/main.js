@@ -1,5 +1,5 @@
 function preloaderFadeOutInit(){
-    $('.loader').fadeOut(5000);
+    $('.loader').fadeOut(1500);
     $('body').attr('id','');
 }
 

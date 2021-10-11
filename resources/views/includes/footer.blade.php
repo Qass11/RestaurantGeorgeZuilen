@@ -77,6 +77,23 @@
 </div>
 
 <div class="container no-border text-center">
+    <ul class="footer-links">
+        <li>
+            <a href="#">Menu</a>
+        </li>
+        <li>
+            <a href="#">Gallery</a>
+        </li>
+        <li>
+            <a href="#">Careers</a>
+        </li>
+        <li>
+            <a href="#">Events</a>
+        </li>
+        <li>
+            <a href="#">Login</a>
+        </li>
+    </ul>
     <p style="margin: 0;">&copy; 2021 George Zuilen</p>
     <p><small><i>An George product of group #13: Mitchel, Qassim, Mohamed, Rens and Dani.</i></small></p>
 </div>

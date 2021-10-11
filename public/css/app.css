@@ -383,14 +383,6 @@ p.width95 {
   background-color: black;
 }
 
-.about-image {
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .bottom-space {
   margin: 0 0 40px 0;
 }
@@ -589,4 +581,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery {
   padding: 30px 0 0 0;
+}
+
+.background-black {
+  background: linear-gradient(65deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://d1d5g9qzvtwux0.cloudfront.net/app/uploads/2018/01/Daltonlaan-300-Utrecht.png);
+  background-position: 110%, center center;
+  background-size: auto 100%, cover;
+  background-repeat: no-repeat, no-repeat;
+  margin: -1px 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.background-black h2, .background-black p {
+  color: #fff;
+}
+
+ul.footer-links {
+  list-style-type: none;
+  margin: 0 0 30px 0;
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7) !important;
+}
+ul.footer-links li {
+  display: inline-block;
+  padding: 0 15px;
+}
+ul.footer-links li:hover a {
+  text-decoration: underline;
+}
+ul.footer-links li a {
+  color: rgb(var(--colorText));
+  font-family: "Lora", serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 125px;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0 0 20px 0;
 }

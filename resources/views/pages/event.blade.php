@@ -34,7 +34,7 @@
                     14 persons Board room<br/>
                     30 persons Theater<br/>
                 </p>
-                <div class="prices">
+                <div class="prices mb-3">
                     <div class="row">
                         <div class="col">
                             <span>Half day</span>
@@ -47,6 +47,9 @@
                         </div>
                     </div>
                 </div>
+                <p>
+                    <a href="#" class="btn btn-sm btn-outline-dark">Book now</a>
+                </p>
             </div>
 
             <div class="col-sm-12 col-md-3 meeting-room">
@@ -56,7 +59,7 @@
                     8 persons Board room<br/>
                     24 persons Theater<br/>
                 </p>
-                <div class="prices">
+                <div class="prices mb-3">
                     <div class="row">
                         <div class="col">
                             <span>Half day</span>
@@ -69,6 +72,9 @@
                         </div>
                     </div>
                 </div>
+                <p>
+                    <a href="#" class="btn btn-sm btn-outline-dark">Book now</a>
+                </p>
             </div>
 
             <div class="col-sm-12 col-md-3 meeting-room">
@@ -78,7 +84,7 @@
                     24 persons Board room<br/>
                     42 persons Theater<br/>
                 </p>
-                <div class="prices">
+                <div class="prices mb-3">
                     <div class="row">
                         <div class="col">
                             <span>Half day</span>
@@ -91,6 +97,9 @@
                         </div>
                     </div>
                 </div>
+                <p>
+                    <a href="#" class="btn btn-sm btn-outline-dark">Book now</a>
+                </p>
             </div>
 
             <div class="col-sm-12 col-md-3 meeting-room">
@@ -100,7 +109,7 @@
                     8 persons Board room<br/>
                     8 persons Theater<br/>
                 </p>
-                <div class="prices">
+                <div class="prices mb-3">
                     <div class="row">
                         <div class="col">
                             <span>Half day</span>
@@ -113,6 +122,9 @@
                         </div>
                     </div>
                 </div>
+                <p>
+                    <a href="#" class="btn btn-sm btn-outline-dark">Book now</a>
+                </p>
             </div>
         </div>
     </div>

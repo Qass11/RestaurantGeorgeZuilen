@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CareerController;
@@ -16,3 +17,4 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 
 Route::get('careers', [CareerController::class, 'index'])->name('career');
+Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');

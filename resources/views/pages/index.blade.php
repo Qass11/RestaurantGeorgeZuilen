@@ -91,10 +91,15 @@
                 <p class="testimonial-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi blanditiis consequatur deleniti dolore earum eligendi fuga fugit impedit ipsam iusto laboriosam libero minus molestiae possimus praesentium quos tempore, voluptate.
                 </p>
-                <p>
-                    <img class="avatar" src="https://images.unsplash.com/photo-1520423465871-0866049020b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60">
-                    <strong>John Doe</strong>
-                    <small>Function / Company</small>
+                <p class="text-center">
+                    <i class="fas fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                </p>
+                <p class="text-center">
+                    <strong>&mdash; John Doe &mdash;</strong>
                 </p>
             </div>
 
@@ -102,10 +107,15 @@
                 <p class="testimonial-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi blanditiis consequatur deleniti dolore earum eligendi fuga fugit impedit ipsam iusto laboriosam libero minus molestiae possimus praesentium quos tempore, voluptate.
                 </p>
-                <p>
-                    <img class="avatar" src="https://images.unsplash.com/photo-1520423465871-0866049020b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60">
-                    <strong>John Doe</strong>
-                    <small>Function / Company</small>
+                <p class="text-center">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                </p>
+                <p class="text-center">
+                    <strong>&mdash; John Doe &mdash;</strong>
                 </p>
             </div>
         </div>

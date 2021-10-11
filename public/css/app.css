@@ -602,3 +602,24 @@ h1, h2, h3, h4, h5, h6 {
 .background-black h2, .background-black p {
   color: #fff;
 }
+
+ul.footer-links {
+  list-style-type: none;
+  margin: 0 0 30px 0;
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7) !important;
+}
+ul.footer-links li {
+  display: inline-block;
+  padding: 0 15px;
+}
+ul.footer-links li:hover a {
+  text-decoration: underline;
+}
+ul.footer-links li a {
+  color: rgb(var(--colorText));
+  font-family: "Lora", serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+}

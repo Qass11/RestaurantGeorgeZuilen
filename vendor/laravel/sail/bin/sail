@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-if ! [ -x "$(command -v docker-compose)" ]; then
-    shopt -s expand_aliases
-    alias docker-compose='docker compose'
-fi
-
 UNAMEOUT="$(uname -s)"
 
 WHITE='\033[1;37m'
@@ -38,7 +33,6 @@ export WWWGROUP=${WWWGROUP:-$(id -g)}
 export SAIL_SHARE_DASHBOARD=${SAIL_SHARE_DASHBOARD:-4040}
 export SAIL_SHARE_SERVER_HOST=${SAIL_SHARE_SERVER_HOST:-"laravel-sail.site"}
 export SAIL_SHARE_SERVER_PORT=${SAIL_SHARE_SERVER_PORT:-8080}
-export SAIL_SHARE_SUBDOMAIN=${SAIL_SHARE_SUBDOMAIN:-""}
 
 # Function that outputs Sail is not running...
 function sail_is_not_running {
@@ -331,7 +325,7 @@ if [ $# -gt 0 ]; then
             --server-host="$SAIL_SHARE_SERVER_HOST" \
             --server-port="$SAIL_SHARE_SERVER_PORT" \
             --auth="$SAIL_SHARE_TOKEN" \
-            --subdomain="$SAIL_SHARE_SUBDOMAIN" \
+            --subdomain="" \
             "$@"
         else
             sail_is_not_running

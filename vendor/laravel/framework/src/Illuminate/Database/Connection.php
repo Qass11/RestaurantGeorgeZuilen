@@ -162,13 +162,6 @@ class Connection implements ConnectionInterface
     protected $pretending = false;
 
     /**
-     * All of the callbacks that should be invoked before a query is executed.
-     *
-     * @var array
-     */
-    protected $beforeExecutingCallbacks = [];
-
-    /**
      * The instance of Doctrine connection.
      *
      * @var \Doctrine\DBAL\Connection
@@ -648,10 +641,6 @@ class Connection implements ConnectionInterface
      */
     protected function run($query, $bindings, Closure $callback)
     {
-        foreach ($this->beforeExecutingCallbacks as $beforeExecutingCallback) {
-            $beforeExecutingCallback($query, $bindings, $this);
-        }
-
         $this->reconnectIfMissingConnection();
 
         $start = microtime(true);
@@ -816,19 +805,6 @@ class Connection implements ConnectionInterface
     public function disconnect()
     {
         $this->setPdo(null)->setReadPdo(null);
-    }
-
-    /**
-     * Register a hook to be run just before a database query is executed.
-     *
-     * @param  \Closure  $callback
-     * @return $this
-     */
-    public function beforeExecuting(Closure $callback)
-    {
-        $this->beforeExecutingCallbacks[] = $callback;
-
-        return $this;
     }
 
     /**

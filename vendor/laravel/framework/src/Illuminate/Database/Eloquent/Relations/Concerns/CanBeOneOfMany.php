@@ -137,7 +137,7 @@ trait CanBeOneOfMany
     {
         return $this->ofMany(collect(Arr::wrap($column))->mapWithKeys(function ($column) {
             return [$column => 'MAX'];
-        })->all(), 'MAX', $relation);
+        })->all(), 'MAX', $relation ?: $this->guessRelationship());
     }
 
     /**
@@ -152,7 +152,7 @@ trait CanBeOneOfMany
     {
         return $this->ofMany(collect(Arr::wrap($column))->mapWithKeys(function ($column) {
             return [$column => 'MIN'];
-        })->all(), 'MIN', $relation);
+        })->all(), 'MIN', $relation ?: $this->guessRelationship());
     }
 
     /**

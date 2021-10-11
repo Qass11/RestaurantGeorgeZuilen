@@ -187,9 +187,7 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-     * {@inheritdoc}
-     *
-     * @return bool
+     *  {@inheritdoc}
      */
     public function has($id)
     {
@@ -695,9 +693,7 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-     * {@inheritdoc}
-     *
-     * @return mixed
+     *  {@inheritdoc}
      */
     public function get($id)
     {
@@ -1241,6 +1237,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  string  $abstract
      * @param  object  $object
      * @param  array  $callbacksPerType
+     *
      * @return array
      */
     protected function getCallbacksForType($abstract, $object, array $callbacksPerType)

@@ -2,7 +2,9 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/panel.css": "/css/panel.css",
-    "/images/.DS_Store": "/images/.DS_Store",
+    "/images/about-one.jpg": "/images/about-one.jpg",
+    "/images/about-three.jpeg": "/images/about-three.jpeg",
+    "/images/about-two.jpg": "/images/about-two.jpg",
     "/images/booktable.jpg": "/images/booktable.jpg",
     "/images/cta.jpeg": "/images/cta.jpeg",
     "/images/cta1.jpg": "/images/cta1.jpg",
@@ -14,7 +16,5 @@
     "/fonts/AkzidenzGrotesk-Light.woff2": "/fonts/AkzidenzGrotesk-Light.woff2",
     "/fonts/AkzidenzGrotesk-Roman.woff": "/fonts/AkzidenzGrotesk-Roman.woff",
     "/fonts/AkzidenzGrotesk-Roman.woff2": "/fonts/AkzidenzGrotesk-Roman.woff2",
-    "/images/about-one.jpg": "/images/about-one.jpg",
-    "/images/about-three.jpeg": "/images/about-three.jpeg",
-    "/images/about-two.jpg": "/images/about-two.jpg"
+    "/images/career.jpeg": "/images/career.jpeg"
 }

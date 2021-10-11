@@ -75,7 +75,7 @@
         <div class="call-to-action-desc">
             <div class="text-place">
                 <h2>Is it time to relax yet?</h2>
-                <p>Book a table now</p>
+                <p data-bs-toggle="modal" data-bs-target="#bookATable">Book a table now</p>
             </div>
         </div>
     </div>

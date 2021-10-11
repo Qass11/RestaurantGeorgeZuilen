@@ -383,14 +383,6 @@ p.width95 {
   background-color: black;
 }
 
-.about-image {
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .bottom-space {
   margin: 0 0 40px 0;
 }
@@ -622,4 +614,16 @@ ul.footer-links li a {
   font-weight: 400;
   text-decoration: none;
   font-style: italic;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 125px;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0 0 20px 0;
 }

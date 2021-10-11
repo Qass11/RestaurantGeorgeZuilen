@@ -20,27 +20,27 @@
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Monday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Tuesday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Wednesday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Thursday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Friday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
         </div>
     </div>

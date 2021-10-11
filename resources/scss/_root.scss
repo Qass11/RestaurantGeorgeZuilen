@@ -1,0 +1,99 @@
+:root {
+    --fontBase: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    --fontSize: 15px;
+
+    --colorBackground: 255, 255, 255;
+    --colorText: 68, 68, 68;
+}
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('../fonts/AkzidenzGrotesk-Black.woff2') format('woff2'),
+    url('../fonts/AkzidenzGrotesk-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('../fonts/AkzidenzGrotesk-Light.woff2') format('woff2'),
+    url('../fonts/AkzidenzGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('../fonts/AkzidenzGrotesk-Roman.woff2') format('woff2'),
+    url('../fonts/AkzidenzGrotesk-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('../fonts/AkzidenzGrotesk-Bold.woff2') format('woff2'),
+    url('../fonts/AkzidenzGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.fade-in {
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    font-family: 'Lora', serif;
+}

@@ -1,2 +1,0 @@
-# restaurantgeorge
-Restaurant George

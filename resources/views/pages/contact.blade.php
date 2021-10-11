@@ -25,7 +25,7 @@
             <div class="col-sm-12 col-md">
                 <h2>Public Transport</h2>
                 <p>
-                    Plan your trip well in advance, our location is easily accessible by public transportation. Get off at the Rijnsweerd Zuid stop.
+                    Plan your trip well in advance, our location is easily accessible by public transportation. Get off at the <b>Rijnsweerd Zuid</b> stop.
                 </p>
 
                 <a href="https://9292.nl/" target="_blank" class="btn btn-small btn-outline-dark">Plan my trip</a>

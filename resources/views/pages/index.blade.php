@@ -2,6 +2,14 @@
 @section('pagename', 'Home')
 
 @section('content')
+    <div class="container border-bottom">
+        <h1>Tijdelijk voor Dani</h1>
+        <p>De tijdelijke buttons voor modals.</p>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginGeorge">
+            Login
+        </button>
+    </div>
     <div class="container border-bottom about-us">
         <div class="row">
             <div class="col-12 col-md-7">

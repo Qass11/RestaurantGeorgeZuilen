@@ -4,5 +4,6 @@
 @section('content')
     <div class="container border-bottom">
     corona update
+
     </div>
 @endsection

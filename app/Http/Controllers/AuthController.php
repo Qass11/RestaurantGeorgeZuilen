@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ConfirmAllowedEmailRequest;
 use App\Models\User;
+use App\Rules\SpecificDomainsOnly;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -23,7 +25,7 @@ class AuthController extends Controller
         $attributes = request()->validate([
             'firstname'     => ['required', 'min:3', 'max:255'],
             'lastname'      => ['required', 'min:3', 'max:255'],
-            'email'         => ['email', 'required', 'unique:users,email', 'min:3', 'max:255'],
+            'email'         => ['email', 'required', 'unique:users,email', 'min:3', 'max:255', new SpecificDomainsOnly],
             'password'      => ['required', 'min:7', 'max:255'],
         ]);
 

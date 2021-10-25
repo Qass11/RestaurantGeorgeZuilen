@@ -85,7 +85,7 @@
             <a href="{{ route('gallery') }}">Gallery</a>
         </li>
         <li>
-            <a href="{{ route('careers') }}">Careers</a>
+            <a href="{{ route('career') }}">Careers</a>
         </li>
         <li>
             <a href="{{ route('event') }}">Events</a>

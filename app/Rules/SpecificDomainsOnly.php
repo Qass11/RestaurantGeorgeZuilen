@@ -30,7 +30,7 @@ class SpecificDomainsOnly implements Rule
         $domains = [
             'mboutrecht.nl',
             'student.mboutrecht.nl',
-            'georgezuilen.nl'
+            'georgezuilen.nl',
         ];
 
         return in_array($domain, $domains);

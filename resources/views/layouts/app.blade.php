@@ -12,6 +12,20 @@
 
 <body>
 
+    @if (session()->has('success'))
+        <p>
+            {{ session('success') }}
+        </p>
+    @endif
+
+    @auth
+        <p>Welkom {{ auth()->user()->firstname }}!</p>
+        <form method="POST" action="/logout">
+            @csrf
+            <button type="submit">logout</button>
+        </form>
+    @endauth
+
 {{--    @include('includes.preloader')--}}
     @include('modals.bookatable')
     @include('modals.login')

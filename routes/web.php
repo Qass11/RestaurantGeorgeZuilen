@@ -26,4 +26,4 @@ Route::post('login', [AuthController::class, 'storeLogin'])->middleware('guest')
 
 Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); // Log out if logged in.
 
-Route::get('activate', [AuthController::class, 'createActivate'])->name('createActivate')->middleware('guest'); // Activate page
+Route::get('activate/{activation_token}', [AuthController::class, 'createActivate'])->name('createActivate'); // Activate page

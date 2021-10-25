@@ -22,5 +22,10 @@ Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 
 // Auth
 
-Route::get('create_account', [AuthController::class, 'create'])->name('create'); // View the page
-Route::post('create_account', [AuthController::class, 'store']); // Send the form
+Route::get('create_account', [AuthController::class, 'createRegister'])->name('create')->middleware('guest'); // Register page
+Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form
+
+Route::get('login', [AuthController::class, 'createLogin'])->middleware('guest'); // Login page
+Route::post('login', [AuthController::class, 'storeLogin'])->middleware('guest'); // Send the login form
+
+Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); // Log out if logged in.

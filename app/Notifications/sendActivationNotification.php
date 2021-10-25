@@ -18,7 +18,7 @@ class sendActivationNotification extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
         $this->data = $data;
     }
@@ -43,11 +43,14 @@ class sendActivationNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Nieuwe gebruiker geregistreerd')
-            ->line('Er is een nieuwe gebruiker geregistreerd.')
-            ->line('Naam'. $this->data->user->name)
-            ->line('Email '.$this->data->user->email)
-            ->action('Gebruiker goedkeuren', route('user.approvements'));
+            ->subject('Created an account at Restaurant George Zuilen.')
+            ->greeting('Hello ' . $this->data->firstname . '!')
+            ->line('You have just successfully completed a registration at Restaurant George Zuilen using the information below:')
+            ->line('Firstname: ' . $this->data->firstname)
+            ->line('Lastname: ' . $this->data->lastname)
+            ->line('E-mail: ' .$this->data->email)
+            ->Line('In order to use your account, you need to activate your account and complete your data, you do this by pressing the button below.')
+            ->action('Activate and complete account', route('createActivate'));
     }
 
     /**

@@ -79,19 +79,19 @@
 <div class="container no-border text-center">
     <ul class="footer-links">
         <li>
-            <a href="#">Menu</a>
+            <a href="{{ route('menu') }}">Menu</a>
         </li>
         <li>
-            <a href="#">Gallery</a>
+            <a href="{{ route('gallery') }}">Gallery</a>
         </li>
         <li>
-            <a href="#">Careers</a>
+            <a href="{{ route('careers') }}">Careers</a>
         </li>
         <li>
-            <a href="#">Events</a>
+            <a href="{{ route('event') }}">Events</a>
         </li>
         <li>
-            <a href="#">Login</a>
+            <a href="{{ route('index') }}">Login</a>
         </li>
     </ul>
     <p style="margin: 0;">&copy; 2021 George Zuilen</p>

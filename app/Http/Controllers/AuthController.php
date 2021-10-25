@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Notifications\sendActivationNotification;
 use App\Rules\SpecificDomainsOnly;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -19,6 +20,11 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
+    public function createActivate()
+    {
+        return view('auth.activate');
+    }
+
     public function storeRegister()
     {
         $attributes = request()->validate([
@@ -28,7 +34,8 @@ class AuthController extends Controller
             'password'      => ['required', 'min:7', 'max:255'],
         ]);
 
-        $createUser = User::create($attributes);
+        $user = User::create($attributes);
+        $user->notify(new sendActivationNotification($user));
 
         return redirect('/')->with('success', 'Your account has been created.');
     }

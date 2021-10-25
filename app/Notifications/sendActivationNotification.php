@@ -50,7 +50,7 @@ class sendActivationNotification extends Notification
             ->line('Lastname: ' . $this->data->lastname)
             ->line('E-mail: ' .$this->data->email)
             ->Line('In order to use your account, you need to activate your account and complete your data, you do this by pressing the button below.')
-            ->action('Activate and complete account', route('createActivate'));
+            ->action('Activate and complete account', route('createActivate', $this->data->activation_token));
     }
 
     /**

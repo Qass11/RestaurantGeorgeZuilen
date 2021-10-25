@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\GalleryController;
@@ -18,3 +19,8 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 Route::get('careers', [CareerController::class, 'index'])->name('career');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
+
+// Auth
+
+Route::get('create_account', [AuthController::class, 'create'])->name('create'); // View the page
+Route::post('create_account', [AuthController::class, 'store']); // Send the form

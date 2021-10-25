@@ -1,3 +1,31 @@
+<div class="background-black">
+    <div class="container border-bottom text-center">
+        <div class="row">
+            <div class="col-sm-12 col-md socials">
+                <h2>Our Careers.</h2>
+                <p>
+                    Looking for a new challenge and a passion to teach others? What are you waiting for, apply at George Zuilen!
+                </p>
+                <a href="{{ route('career') }}" class="btn btn-sm btn-outline-light">More information</a>
+            </div>
+
+            <div class="col-sm-12 col-md socials">
+                <h2>See our beauty.</h2>
+                <p>
+                    We are happy to show you our beauty and give you an impression of our working environment and location, a clean look at George Zuilen!
+                </p>
+                <a href="{{ route('gallery') }}" class="btn btn-sm btn-outline-light">Bring me to the beauty</a>
+            </div>
+
+            <div class="col-sm-12 col-md socials">
+                <h2>MBO Utrecht.</h2>
+                <p>Our George Zuilen location is located at MBO Utrecht, a learning environment for eager students. We are happy to assist them in their future careers.</p>
+                <a href="{{ route('about') }}" class="btn btn-sm btn-outline-light">More information</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container border-bottom text-center">
     <div class="row">
         <div class="col-sm-12 col-md socials">
@@ -49,5 +77,23 @@
 </div>
 
 <div class="container no-border text-center">
-    <p>&copy; 2021 George Zuilen</p>
+    <ul class="footer-links">
+        <li>
+            <a href="#">Menu</a>
+        </li>
+        <li>
+            <a href="#">Gallery</a>
+        </li>
+        <li>
+            <a href="#">Careers</a>
+        </li>
+        <li>
+            <a href="#">Events</a>
+        </li>
+        <li>
+            <a href="#">Login</a>
+        </li>
+    </ul>
+    <p style="margin: 0;">&copy; 2021 George Zuilen</p>
+    <p><small><i>An George product of group #13: Mitchel, Qassim, Mohamed, Rens and Dani.</i></small></p>
 </div>

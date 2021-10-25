@@ -92,6 +92,15 @@
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
             margin: 0 0 -20px 0;
 
+            &.career {
+                background: linear-gradient(
+                                65deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/career.jpeg);
+                background-position: 110%, center center;
+                background-size: auto 100%, cover;
+                background-repeat: no-repeat, no-repeat;
+                margin: 20px 0 40px 0;
+            }
+
             .text-place {
                 padding: 45px 0;
                 text-align: center;
@@ -274,4 +283,37 @@
             width: 97.5%;
         }
     }
+}
+
+p {
+    &.width95 {
+        width: 95%;
+    }
+}
+
+.career-review {
+
+    &:last-child {
+        border-top: 1px solid rgba(0,0,0,.7);
+        padding: 20px 0 0 0;
+    }
+    p {
+        &:first-child {
+            font-size: 13px;
+        }
+
+        &:last-child {
+            font-weight: 600;
+            font-style: italic;
+        }
+    }
+}
+
+.motivationtext {
+    height: 125px !important;
+}
+
+.btn-apply {
+    width: 100%;
+    margin: 15px 0 0 0;
 }

@@ -12,3 +12,12 @@
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+
+#register-foto{
+    background-image: url("../images/about-one.jpg");
+    background-repeat: no-repeat;
+    height: 200px;
+    object-fit:contain;
+    margin: 20px;
+    box-shadow: 2px 2px 4px 4px gray;
+}

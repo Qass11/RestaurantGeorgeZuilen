@@ -33,10 +33,11 @@ class AuthController extends Controller
             'lastname'          => ['required', 'min:3', 'max:255'],
             'email'             => ['email', 'required', 'unique:users,email', 'min:3', 'max:255', new SpecificDomainsOnly],
             'password'          => ['required', 'min:7', 'max:255'],
-            'activation_token'  => Uuid::uuid4(),
         ]);
 
         $user = User::create($attributes);
+        $user->activation_token = Uuid::uuid4();
+        $user->save();
         $user->notify(new sendActivationNotification($user));
 
         return redirect('/')->with('success', 'Your account has been created.');

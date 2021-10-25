@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('pagename', 'About Us')
+@section('pagename', 'Activate and complete account')
 
 @section('content')
     <div class="container border-bottom">

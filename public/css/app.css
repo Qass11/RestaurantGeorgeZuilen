@@ -330,6 +330,16 @@ p {
   filter: grayscale(100%);
 }
 
+#register-foto {
+  background-image: url(/images/about-one.jpg?9f50a996b9d424985dd8cb5228dad55a);
+  background-repeat: no-repeat;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 20px;
+  box-shadow: 2px 2px 4px 4px gray;
+}
+
 .employee {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border-radius: 5px;

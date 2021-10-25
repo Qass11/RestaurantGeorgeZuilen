@@ -9,6 +9,21 @@
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginGeorge">
             Login
         </button>
+        <br>
+        <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#registerGeorge">
+            Register
+        </button>
+        <br>
+        <button type="button" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#activateGeorge">
+            Activate
+        </button>
+
+
+
+
+
+
+
     </div>
     <div class="container border-bottom about-us">
         <div class="row">

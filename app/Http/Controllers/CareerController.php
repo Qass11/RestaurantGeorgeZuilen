@@ -10,4 +10,7 @@ class CareerController extends Controller
     {
         return view('pages.career');
     }
+
+
+
 }

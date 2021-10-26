@@ -2,14 +2,14 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/panel.css": "/css/panel.css",
+    "/images/about-four.jpg": "/images/about-four.jpg",
     "/images/about-one.jpg": "/images/about-one.jpg",
     "/images/about-three.jpeg": "/images/about-three.jpeg",
     "/images/about-two.jpg": "/images/about-two.jpg",
     "/images/booktable.jpg": "/images/booktable.jpg",
+    "/images/career.jpeg": "/images/career.jpeg",
     "/images/cta.jpeg": "/images/cta.jpeg",
     "/images/cta1.jpg": "/images/cta1.jpg",
-    "/images/career.jpeg": "/images/career.jpeg",
-    "/images/about-four.jpg": "/images/about-four.jpg"
     "/fonts/AkzidenzGrotesk-Black.woff": "/fonts/AkzidenzGrotesk-Black.woff",
     "/fonts/AkzidenzGrotesk-Black.woff2": "/fonts/AkzidenzGrotesk-Black.woff2",
     "/fonts/AkzidenzGrotesk-Bold.woff": "/fonts/AkzidenzGrotesk-Bold.woff",
@@ -17,4 +17,5 @@
     "/fonts/AkzidenzGrotesk-Light.woff": "/fonts/AkzidenzGrotesk-Light.woff",
     "/fonts/AkzidenzGrotesk-Light.woff2": "/fonts/AkzidenzGrotesk-Light.woff2",
     "/fonts/AkzidenzGrotesk-Roman.woff": "/fonts/AkzidenzGrotesk-Roman.woff",
+    "/fonts/AkzidenzGrotesk-Roman.woff2": "/fonts/AkzidenzGrotesk-Roman.woff2"
 }

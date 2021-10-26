@@ -372,6 +372,15 @@ p.width95 {
   box-shadow: 2px 2px 4px 4px gray;
 }
 
+.activate-foto {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  box-shadow: 2px 2px 4px 4px gray;
+}
+
 .employee {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border-radius: 5px;

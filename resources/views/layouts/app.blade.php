@@ -27,8 +27,7 @@
     @endauth
 
 {{--    @include('includes.preloader')--}}
-    @include('modals.bookatable')
-    @include('modals.login')
+    @include('includes.modals')
     @include('includes.navigation')
     @yield('content')
     @include('includes.footer')

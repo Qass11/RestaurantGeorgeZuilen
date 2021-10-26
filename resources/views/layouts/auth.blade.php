@@ -10,28 +10,9 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css">
 </head>
 
-<body>
+<body class="bg-blue">
 
-    @if (session()->has('success'))
-        <p>
-            {{ session('success') }}
-        </p>
-    @endif
-
-    @auth
-        <p>Welkom {{ auth()->user()->firstname }}!</p>
-        <form method="POST" action="/logout">
-            @csrf
-            <button type="submit">logout</button>
-        </form>
-    @endauth
-
-{{--    @include('includes.preloader')--}}
-    @include('modals.bookatable')
-    @include('modals.login')
-    @include('includes.navigation')
     @yield('content')
-    @include('includes.footer')
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>

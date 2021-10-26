@@ -83,6 +83,11 @@ html,body {
                 margin: 0;
                 font-family: 'Lora', serif;
                 font-style: italic;
+
+                strong {
+                    display: block;
+                    font-size: 19px;
+                }
             }
 
             &:first-child {

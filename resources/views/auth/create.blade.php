@@ -74,7 +74,7 @@
     </form>
 
     <p class="footer-link">
-        <a href="#">
+        <a href="{{ route('login') }}">
             Do you already have an account? Click here to log in.
         </a>
     </p>

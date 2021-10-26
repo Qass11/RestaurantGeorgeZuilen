@@ -20,10 +20,10 @@ Route::get('careers', [CareerController::class, 'index'])->name('career');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('corona', [CoronaController::class, 'index'])->name('corona');
 
-Route::get('create_account', [AuthController::class, 'createRegister'])->name('createRegister')->middleware('guest'); // Register page
+Route::get('create_account', [AuthController::class, 'createRegister'])->name('register')->middleware('guest'); // Register page
 Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form
 
-Route::get('login', [AuthController::class, 'createLogin'])->name('createLogin')->middleware('guest'); // Login page
+Route::get('login', [AuthController::class, 'createLogin'])->name('login')->middleware('guest'); // Login page
 Route::post('login', [AuthController::class, 'storeLogin'])->middleware('guest'); // Send the login form
 
 Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); // Log out if logged in.

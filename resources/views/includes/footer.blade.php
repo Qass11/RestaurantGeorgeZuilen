@@ -91,7 +91,10 @@
             <a href="{{ route('event') }}">Events</a>
         </li>
         <li>
-            <a href="{{ route('index') }}">Login</a>
+            <a href="{{ route('login') }}">Login</a>
+        </li>
+        <li>
+            <a href="{{ route('register') }}">Create an account</a>
         </li>
     </ul>
     <p style="margin: 0;">&copy; 2021 George Zuilen</p>

@@ -455,6 +455,23 @@ p.width95 {
   text-align: center;
 }
 
+.corona-info {
+  text-align: center;
+}
+.corona-info a {
+  font-family: "Lora", serif;
+  color: rgb(var(--colorText));
+  text-decoration: none;
+}
+.corona-info a i {
+  margin: 0 auto 10px auto;
+  display: block;
+  font-size: 25px;
+}
+.corona-info a:hover {
+  font-style: italic;
+}
+
 .image-book {
   height: 120px;
   -o-object-fit: cover;

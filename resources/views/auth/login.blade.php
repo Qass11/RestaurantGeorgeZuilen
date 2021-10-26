@@ -1,34 +1,53 @@
-@extends('layouts.app')
-@section('pagename', 'About Us')
+@extends('layouts.auth')
+@section('pagename', 'Login')
 
 @section('content')
-<div class="container border-bottom">
-    <form action="/login" method="POST">
-
-        @if ($errors->any())
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        @endif
-
-        @csrf
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
-            @error('email')
-                <p>{{ $message }}</p>
-            @enderror
-        </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-                @error('password')
-                <p>{{ $message }}</p>
-                @enderror
+    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <form class="card" action="/login" method="POST">
+            <div class="card-body text-center">
+                <p>
+                    Use the form below to log into your personal area of @lang('george.name.full').
+                </p>
             </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
+
+            <div class="card-body">
+                @csrf
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="email" value="{{ old('email') }}" aria-describedby="emailHelp" required>
+                    <label for="floatingInput">E-mail address</label>
+
+                    @error('email')
+                    <div id="emailHelp" class="form-text color-red">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="password" aria-describedby="passwordHelp" required>
+                    <label for="floatingInput">Password</label>
+
+                    @error('password')
+                    <div id="passwordHelp" class="form-text color-red">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-dark">Login with my credentials</button>
+                </div>
+
+
+
+            </div>
+        </form>
+
+        <p class="footer-link">
+            <a href="{{ route('register') }}">
+                Don't have an account yet? Click here to create an account.
+            </a>
+        </p>
+    </div>
 @endsection

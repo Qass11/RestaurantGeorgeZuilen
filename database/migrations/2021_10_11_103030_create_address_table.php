@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('streetname');
             $table->string('house_number');
-            $table->string('house_number_addition');
             $table->string('zipcode');
             $table->string('city');
             $table->timestamps();

@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('student_type_users', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('employee_id');
-            $table->foreignId('course_id');
             $table->foreignId('address_id');
             $table->string('student_number');
             $table->string('photo');

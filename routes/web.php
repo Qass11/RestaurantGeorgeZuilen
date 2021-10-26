@@ -9,6 +9,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CareerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CoronaController;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('about');
@@ -17,6 +18,7 @@ Route::get('event', [EventController::class, 'index'])->name('event');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::get('careers', [CareerController::class, 'index'])->name('career');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
+Route::get('corona', [CoronaController::class, 'index'])->name('corona');
 
 Route::get('create_account', [AuthController::class, 'createRegister'])->name('createRegister')->middleware('guest'); // Register page
 Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form

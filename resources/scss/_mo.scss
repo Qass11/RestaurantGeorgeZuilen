@@ -81,9 +81,12 @@
         text-decoration: none;
 
         i {
-            margin: 0 auto 10px auto;
             display: block;
-            font-size: 25px;
+            position: absolute;
+            left: 48%;
+            font-size: 50px;
+            margin-top: -15px;
+            opacity: 0.2;
         }
 
         &:hover {

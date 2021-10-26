@@ -2,6 +2,29 @@
 @section('pagename', 'Home')
 
 @section('content')
+    <div class="container border-bottom">
+        <h1>Tijdelijk voor Dani</h1>
+        <p>De tijdelijke buttons voor modals.</p>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginGeorge">
+            Login
+        </button>
+        <br>
+        <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#registerGeorge">
+            Register
+        </button>
+        <br>
+        <button type="button" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#activateGeorge">
+            Activate
+        </button>
+
+
+
+
+
+
+
+    </div>
     <div class="container border-bottom about-us">
         <div class="row">
             <div class="col-12 col-md-7">
@@ -46,27 +69,27 @@
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Monday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Tuesday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Wednesday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Thursday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
             <div class="col-sm-12 col-md">
                 <i class="fal fa-clock fa-fw icon-george"></i>
                 <p><strong>Friday</strong></p>
-                <p>10:00 &mdash; 20:00</p>
+                <p>18:00 &mdash; 21:00</p>
             </div>
         </div>
     </div>
@@ -75,7 +98,7 @@
         <div class="call-to-action-desc">
             <div class="text-place">
                 <h2>Is it time to relax yet?</h2>
-                <p>Book a table now</p>
+                <p data-bs-toggle="modal" data-bs-target="#bookATable">Book a table now</p>
             </div>
         </div>
     </div>
@@ -91,10 +114,15 @@
                 <p class="testimonial-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi blanditiis consequatur deleniti dolore earum eligendi fuga fugit impedit ipsam iusto laboriosam libero minus molestiae possimus praesentium quos tempore, voluptate.
                 </p>
-                <p>
-                    <img class="avatar" src="https://images.unsplash.com/photo-1520423465871-0866049020b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60">
-                    <strong>John Doe</strong>
-                    <small>Function / Company</small>
+                <p class="text-center">
+                    <i class="fas fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                </p>
+                <p class="text-center">
+                    <strong>&mdash; John Doe &mdash;</strong>
                 </p>
             </div>
 
@@ -102,10 +130,15 @@
                 <p class="testimonial-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi blanditiis consequatur deleniti dolore earum eligendi fuga fugit impedit ipsam iusto laboriosam libero minus molestiae possimus praesentium quos tempore, voluptate.
                 </p>
-                <p>
-                    <img class="avatar" src="https://images.unsplash.com/photo-1520423465871-0866049020b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60">
-                    <strong>John Doe</strong>
-                    <small>Function / Company</small>
+                <p class="text-center">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fal fa-star"></i>
+                    <i class="fal fa-star"></i>
+                </p>
+                <p class="text-center">
+                    <strong>&mdash; John Doe &mdash;</strong>
                 </p>
             </div>
         </div>

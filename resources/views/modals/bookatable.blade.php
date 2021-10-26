@@ -66,7 +66,7 @@
                 <h5 class="modal-title" id="exampleModalToggleLabel2">Book a Table: Personal information (2/2)</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <img src="./src/img/booktable.jpg" class="img-fluid image-book">
+            <img src="{{ asset('images/booktable.jpg') }}" class="img-fluid image-book">
             <div class="modal-body">
                 <form>
                     <div class="row">

@@ -2,6 +2,12 @@
 @section('pagename', 'Home')
 
 @section('content')
+    <div class="container border-bottom corona-info">
+        <a href="{{ route('corona') }}">
+            <i class="far fa-hands-wash fa-fw"></i>
+            Click here for the latest covid-19 updates.
+        </a>
+    </div>
     <div class="container border-bottom about-us">
         <div class="row">
             <div class="col-12 col-md-7">

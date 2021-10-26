@@ -71,3 +71,23 @@
     font-size: 20px;
     text-align: center;
 }
+
+.corona-info {
+    text-align: center;
+
+    a {
+        font-family: 'Lora', serif;
+        color: rgb(var(--colorText));
+        text-decoration: none;
+
+        i {
+            margin: 0 auto 10px auto;
+            display: block;
+            font-size: 25px;
+        }
+
+        &:hover {
+            font-style: italic;
+        }
+    }
+}

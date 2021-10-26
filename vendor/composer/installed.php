@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '35f8e438bd80e760e44486b4ab6a7b1de1651d9e',
+    'reference' => '2289524720b94896697f2d5a6bc75e84106ff270',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -22,12 +22,12 @@
     ),
     'barryvdh/laravel-debugbar' => 
     array (
-      'pretty_version' => 'v3.6.2',
-      'version' => '3.6.2.0',
+      'pretty_version' => 'v3.6.3',
+      'version' => '3.6.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '70b89754913fd89fef16d0170a91dbc2a5cd633a',
+      'reference' => 'fc69fd6293e4e9d0f0181bb56219e9b3b3c4dd1f',
     ),
     'brick/math' => 
     array (
@@ -445,7 +445,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '35f8e438bd80e760e44486b4ab6a7b1de1651d9e',
+      'reference' => '2289524720b94896697f2d5a6bc75e84106ff270',
     ),
     'laravel/sail' => 
     array (
@@ -863,18 +863,18 @@
     ),
     'ramsey/uuid' => 
     array (
-      'pretty_version' => '4.2.1',
-      'version' => '4.2.1.0',
+      'pretty_version' => '4.2.3',
+      'version' => '4.2.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fe665a03df4f056aa65af552a96e1976df8c8dae',
+      'reference' => 'fc9bb7fb5388691fd7373cd44dcb4d63bbcf24df',
     ),
     'rhumsaa/uuid' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.1',
+        0 => '4.2.3',
       ),
     ),
     'sebastian/cli-parser' => 

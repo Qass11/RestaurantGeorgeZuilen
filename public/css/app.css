@@ -143,13 +143,7 @@ p {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   margin: 0 0 -20px 0;
 }
-.container.call-to-action .call-to-action-menu-one.career {
-  background: linear-gradient(65deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/career.jpeg?c5ff0438cb613bd3d6e7fd5835ab3372);
-  background-position: 110%, center center;
-  background-size: auto 100%, cover;
-  background-repeat: no-repeat, no-repeat;
-  margin: 20px 0 40px 0;
-}
+
 .container.call-to-action .call-to-action-menu-one .text-place {
   padding: 45px 0;
   text-align: center;

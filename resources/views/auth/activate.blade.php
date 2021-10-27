@@ -14,6 +14,8 @@
             <div class="card-body">
                 @csrf
 
+                <input type="hidden" name="uuid" value="{{$user->activation_token}}">
+
                 <div class="row">
                     <div class="col-8">
                         <div class="form-floating mb-3">

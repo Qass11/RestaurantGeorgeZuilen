@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\HtmlString;
 
 class sendActivationNotification extends Notification
 {
@@ -46,9 +47,9 @@ class sendActivationNotification extends Notification
             ->subject('Created an account at Restaurant George Zuilen.')
             ->greeting('Hello ' . $this->data->firstname . '!')
             ->line('You have just successfully completed a registration at Restaurant George Zuilen using the information below:')
-            ->line('Firstname: ' . $this->data->firstname)
-            ->line('Lastname: ' . $this->data->lastname)
-            ->line('E-mail: ' .$this->data->email)
+            ->line(new HtmlString('<strong>Firstname:</strong><br/>' . $this->data->firstname))
+            ->line(new HtmlString('<strong>Lastname:</strong><br/>' . $this->data->lastname))
+            ->line(new HtmlString('<strong>E-mail:</strong><br/>' . $this->data->email))
             ->Line('In order to use your account, you need to activate your account and complete your data, you do this by pressing the button below.')
             ->action('Activate and complete account', route('createActivate', $this->data->activation_token));
     }

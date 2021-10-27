@@ -21,9 +21,11 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function createActivate()
+    public function createActivate($uuid)
     {
-        return view('auth.activate');
+        $user = User::userByUuid($uuid);
+
+        return view('auth.activate', compact('user'));
     }
 
     public function storeRegister()
@@ -34,6 +36,16 @@ class AuthController extends Controller
             'email'             => ['email', 'required', 'unique:users,email', 'min:3', 'max:255', new SpecificDomainsOnly],
             'password'          => ['required', 'min:7', 'max:255'],
         ]);
+
+        $domain = substr($attributes['email'], strpos($attributes['email'], '@') + 1);
+
+        $domains = [
+            2 => 'student.mboutrecht.nl',
+            3 => 'mboutrecht.nl',
+            4 => 'georgezuilen.nl',
+        ];
+
+        $allowed = in_array($domains[$domain], $domains);
 
         $user = User::create($attributes);
         $user->activation_token = Uuid::uuid4();

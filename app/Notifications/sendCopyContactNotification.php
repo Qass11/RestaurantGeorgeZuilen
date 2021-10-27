@@ -48,8 +48,8 @@ class sendCopyContactNotification extends Notification
             ->greeting('Hello ' . $this->data->firstname . '!')
             ->line('We hereby send you a copy of your completed contact form on the Restaurant George Zuilen website.')
             ->line('The information below is given:')
-            ->line(new HtmlString('<strong>E-mail:</strong><br/>' . $this->data->email))
-            ->line(new HtmlString('<strong>Phone number:</strong><br/>' . $this->data->phone_number))
+            ->line(new HtmlString('<strong>E-mail:</strong> ' . $this->data->email))
+            ->line(new HtmlString('<strong>Phone number:</strong> ' . $this->data->phone_number))
             ->line(new HtmlString('<strong>Subject:</strong><br/>' . $this->data->subject))
             ->line(new HtmlString('<strong>Message:</strong><br/>' . $this->data->text))
             ->action('Reserve a table in our restaurant', route('index'));

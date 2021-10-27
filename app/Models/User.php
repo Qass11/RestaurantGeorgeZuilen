@@ -60,4 +60,14 @@ class User extends Authenticatable
     {
         return static::where('activation_token', $uuid)->first();
     }
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class, 'id', 'user_id');
+    }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class, 'id', 'user_id');
+    }
 }

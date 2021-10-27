@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\HtmlString;
 
-class sendActivationNotification extends Notification
+class sendContactNotification extends Notification
 {
     use Queueable;
 
@@ -19,9 +19,10 @@ class sendActivationNotification extends Notification
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($data, $email)
     {
         $this->data = $data;
+        $this->email = $email;
     }
 
     /**
@@ -43,15 +44,20 @@ class sendActivationNotification extends Notification
      */
     public function toMail($notifiable)
     {
+        $notifiable->email = $this->email;
+
         return (new MailMessage)
-            ->subject('Created an account at Restaurant George Zuilen.')
-            ->greeting('Hello ' . $this->data->firstname . '!')
-            ->line('You have just successfully completed a registration at Restaurant George Zuilen using the information below:')
+            ->subject('A contact form has been filled in.')
+            ->greeting('Hello Team George Zuilen!')
+            ->line('A contact form has just been filled out on the website, we hereby notify you that you should contact ' . $this->data->firstname . ' within 2 business days.')
+            ->line('The information below is given:')
             ->line(new HtmlString('<strong>Firstname:</strong> ' . $this->data->firstname))
             ->line(new HtmlString('<strong>Lastname:</strong> ' . $this->data->lastname))
             ->line(new HtmlString('<strong>E-mail:</strong> ' . $this->data->email))
-            ->Line('In order to use your account, you need to activate your account and complete your data, you do this by pressing the button below.')
-            ->action('Activate and complete account', route('createActivate', $this->data->activation_token));
+            ->line(new HtmlString('<strong>Phone number:</strong> ' . $this->data->phone_number))
+            ->line(new HtmlString('<strong>Subject:</strong><br/>' . $this->data->subject))
+            ->line(new HtmlString('<strong>Message:</strong><br/>' . $this->data->text))
+            ->line('The contact form can also be found in your personal area of Restaurant George Marina.');
     }
 
     /**
@@ -63,7 +69,7 @@ class sendActivationNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'data' => $this->data->user->email,
+            //
         ];
     }
 }

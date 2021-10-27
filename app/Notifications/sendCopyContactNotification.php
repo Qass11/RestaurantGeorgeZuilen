@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\HtmlString;
 
-class sendActivationNotification extends Notification
+class sendCopyContactNotification extends Notification
 {
     use Queueable;
 
@@ -44,14 +44,15 @@ class sendActivationNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Created an account at Restaurant George Zuilen.')
+            ->subject('Copy of your completed contact form.')
             ->greeting('Hello ' . $this->data->firstname . '!')
-            ->line('You have just successfully completed a registration at Restaurant George Zuilen using the information below:')
-            ->line(new HtmlString('<strong>Firstname:</strong> ' . $this->data->firstname))
-            ->line(new HtmlString('<strong>Lastname:</strong> ' . $this->data->lastname))
+            ->line('We hereby send you a copy of your completed contact form on the Restaurant George Zuilen website.')
+            ->line('The information below is given:')
             ->line(new HtmlString('<strong>E-mail:</strong> ' . $this->data->email))
-            ->Line('In order to use your account, you need to activate your account and complete your data, you do this by pressing the button below.')
-            ->action('Activate and complete account', route('createActivate', $this->data->activation_token));
+            ->line(new HtmlString('<strong>Phone number:</strong> ' . $this->data->phone_number))
+            ->line(new HtmlString('<strong>Subject:</strong><br/>' . $this->data->subject))
+            ->line(new HtmlString('<strong>Message:</strong><br/>' . $this->data->text))
+            ->action('Reserve a table in our restaurant', route('index'));
     }
 
     /**
@@ -63,7 +64,7 @@ class sendActivationNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'data' => $this->data->user->email,
+            'data' => $this->data->contact->email,
         ];
     }
 }

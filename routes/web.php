@@ -15,7 +15,10 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('about');
 Route::get('menu', [MenuController::class, 'index'])->name('menu');
 Route::get('event', [EventController::class, 'index'])->name('event');
+
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::post('contact', [ContactController::class, 'storeContact']);
+
 Route::get('careers', [CareerController::class, 'index'])->name('career');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('corona', [CoronaController::class, 'index'])->name('corona');

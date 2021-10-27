@@ -6,7 +6,7 @@
         <form class="card" action="/activate" method="POST">
             <div class="card-body text-center">
                 <p>
-                    <strong>Hello, name here! <i class="far fa-hand-peace fa-fw"></i></strong>
+                    <strong>Hello, {{ $user->firstname }} {{ $user->lastname }}! <i class="far fa-hand-peace fa-fw"></i></strong>
                     Use the form below to activate your account and complete the necessary information to complete your account.
                 </p>
             </div>

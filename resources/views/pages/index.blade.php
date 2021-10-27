@@ -2,6 +2,13 @@
 @section('pagename', 'Home')
 
 @section('content')
+
+    @if (session()->has('success'))
+        <p>
+            {{ session('success') }}
+        </p>
+    @endif
+
     <div class="container border-bottom corona-info">
         <a href="{{ route('corona') }}">
             <i class="far fa-hands-wash fa-fw"></i>

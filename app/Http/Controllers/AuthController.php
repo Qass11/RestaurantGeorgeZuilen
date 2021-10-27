@@ -6,8 +6,10 @@ use App\Models\User;
 use App\Notifications\sendActivationNotification;
 use App\Rules\SpecificDomainsOnly;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Ramsey\Uuid\Uuid;
+use App\Http\Services\ActivateServiceController;
 
 class AuthController extends Controller
 {
@@ -28,13 +30,33 @@ class AuthController extends Controller
         return view('auth.activate', compact('user'));
     }
 
+    public function storeActivate(Request $request)
+    {
+        $user = User::userByUuid($request->uuid);
+
+        $address = $user->student()->address->create([
+            'streetname'            => $request->input('streetname'),
+            'house_number'          => $request->input('house_number'),
+            'zipcode'               => $request->input('zipcode'),
+            'city'                  => $request->input('city'),
+        ]);
+
+        if($user->user_types_id == 2) {
+            $user->student()->create([
+                'user_id'           => $user->id,
+                'address_id'        => $address->id,
+                'student_number'    => mt_rand(0, 6),
+            ]);
+        }
+    }
+
     public function storeRegister()
     {
         $attributes = request()->validate([
-            'firstname'         => ['required', 'min:3', 'max:255'],
-            'lastname'          => ['required', 'min:3', 'max:255'],
-            'email'             => ['email', 'required', 'unique:users,email', 'min:3', 'max:255', new SpecificDomainsOnly],
-            'password'          => ['required', 'min:7', 'max:255'],
+            'firstname'             => ['required', 'min:3', 'max:255'],
+            'lastname'              => ['required', 'min:3', 'max:255'],
+            'email'                 => ['email', 'required', 'unique:users,email', 'min:3', 'max:255', new SpecificDomainsOnly],
+            'password'              => ['required', 'min:7', 'max:255'],
         ]);
 
         $domain = substr($attributes['email'], strpos($attributes['email'], '@') + 1);
@@ -59,8 +81,8 @@ class AuthController extends Controller
     public function storeLogin()
     {
         $attributes = request()->validate([
-           'email'          => ['email', 'required'],
-           'password'       => ['required'],
+           'email'                  => ['email', 'required'],
+           'password'               => ['required'],
         ]);
 
         if (auth()->attempt($attributes)) {

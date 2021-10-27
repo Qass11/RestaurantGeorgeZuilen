@@ -4,19 +4,21 @@ namespace App\Http\Services;
 
 class ActivateServiceController {
 
-    public function address($id, $streetname, $house_number, $zipcode, $city) {
+    public $attributes = [];
 
+    public function address(array $data) {
+        $this->attributes = $data;
     }
 
-    public function student($id, $user_id, $address_id, $student_number) {
-
+    public function student(array $data) {
+        $this->attributes = $data;
     }
 
-    public function employee($id, $user_id, $address_id, $employee_number) {
-
+    public function employee(array $data) {
+        $this->attributes = $data;
     }
 
-    public function user($id, $email_verified_at, $phone_number) {
-
+    public function user(array $data) {
+        $this->attributes = $data;
     }
 }

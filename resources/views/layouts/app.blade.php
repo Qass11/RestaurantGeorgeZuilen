@@ -12,12 +12,6 @@
 
 <body>
 
-    @if (session()->has('success'))
-        <p>
-            {{ session('success') }}
-        </p>
-    @endif
-
     @auth
         <p>Welkom {{ auth()->user()->firstname }}!</p>
         <form method="POST" action="/logout">

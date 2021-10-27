@@ -40,14 +40,15 @@ class AuthController extends Controller
         $domain = substr($attributes['email'], strpos($attributes['email'], '@') + 1);
 
         $domains = [
-            2 => 'student.mboutrecht.nl',
-            3 => 'mboutrecht.nl',
-            4 => 'georgezuilen.nl',
+            'student.mboutrecht.nl' => 2,
+            'mboutrecht.nl' => 3,
+            'georgezuilen.nl' => 4,
         ];
 
-        $allowed = in_array($domains[$domain], $domains);
-
         $user = User::create($attributes);
+
+        $user->user_types_id = array_key_exists($domain, $domains) ? $domains[$domain] : 0;
+
         $user->activation_token = Uuid::uuid4();
         $user->save();
         $user->notify(new sendActivationNotification($user));

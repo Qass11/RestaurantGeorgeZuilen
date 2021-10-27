@@ -55,4 +55,9 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
+    public static function userByUuid($uuid)
+    {
+        return static::where('activation_token', $uuid)->first();
+    }
 }

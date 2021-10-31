@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             UserTypesSeeder::class,
             MenuCategoriesSeeder::class,
             MenuItemsSeeder::class,
+            OpeningHoursSeeder::class,
         ]);
     }
 }

@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         view()->composer('*', function($view) {
-            $view->with('openingHours', OpeningHours::all());
+            $view->with('openingHours', OpeningHours::orderBy('id')->get());
         });
     }
 }

@@ -18,4 +18,9 @@ return [
     'home' => [
         'title'             => 'Hello, we are George Zuilen!',
     ],
+
+    'openingHours' => [
+        'title'             => 'Opening Hours.',
+        'description'       => 'Every working day you are welcome in our restaurant, below you can see all our opening hours.',
+    ],
 ];

@@ -789,3 +789,8 @@ ul.footer-links li a {
      object-position: center;
   margin: 0 0 20px 0;
 }
+
+.nothing {
+  font-family: "Lora", serif;
+  font-style: italic;
+}

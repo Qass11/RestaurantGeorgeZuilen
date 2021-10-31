@@ -10,7 +10,7 @@
             @forelse($gallery as $data)
                 <div class="col">
                     <div class="card h-100">
-                        <img src="{{ $data->imageUrl }}" class="card-img-top" alt="{{ $data->description }}">
+                        <img src="{{ $data->imageUrl }}" class="card-img-top img-fluid" alt="{{ $data->description }}">
                         <div class="card-body">
                             <p class="card-text">{{ $data->description }}</p>
                         </div>

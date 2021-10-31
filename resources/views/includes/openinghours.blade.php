@@ -1,6 +1,6 @@
 <div class="container border-bottom text-center opening-hours">
-    <h2>Opening Hours.</h2>
-    <p>Every working day you are welcome in our restaurant, below you can see all our opening hours.</p>
+    <h2>@lang('george.openingHours.title')</h2>
+    <p>@lang('george.openingHours.description')</p>
     <div class="row">
         @foreach($openingHours as $hour)
             <div class="col-sm-12 col-md">

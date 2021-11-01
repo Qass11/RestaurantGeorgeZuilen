@@ -12,14 +12,6 @@
 
 <body>
 
-    @auth
-        <p>Welkom {{ auth()->user()->firstname }}!</p>
-        <form method="POST" action="/logout">
-            @csrf
-            <button type="submit">logout</button>
-        </form>
-    @endauth
-
 {{--    @include('includes.preloader')--}}
     @include('includes.modals')
     @include('includes.navigation')

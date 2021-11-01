@@ -10,6 +10,15 @@ class Employee extends Model
 {
     use HasFactory;
 
+    protected $table = 'employee_type_users';
+
+    protected $fillable = [
+        'user_id',
+        'employee_number',
+        'address_id',
+        'photo'
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

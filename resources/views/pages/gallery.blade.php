@@ -1,67 +1,26 @@
 @extends('layouts.app')
-@section('pagename', 'Our Careers')
+@section('pagename', 'Our Beauty')
 
 @section('content')
     <div class="container border-bottom text-center">
-        <h1>Our Gallery</h1>
-        <p>
-            Below you'll see our gallery of photos we're proud of. This gallery can give you an impression about your visit to George Zuilen.
-        </p>
+        <h1>@lang('george.gallery.title')</h1>
+        <p>@lang('george.gallery.description')</p>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 gallery">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ asset('images/booktable.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 gallery text-center">
+            @forelse($gallery as $data)
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ $data->imageUrl }}" class="card-img-top img-fluid" alt="{{ $data->description }}">
+                        <div class="card-body">
+                            <p class="card-text">{{ $data->description }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ asset('images/booktable.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum.</p>
-                    </div>
+            @empty
+                <div class="col-sm-12 col-md-12 text-center nothing">
+                    @lang('george.gallery.nothing')
                 </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ asset('images/booktable.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ asset('images/booktable.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ asset('images/booktable.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{{ asset('images/booktable.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum.</p>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 @endsection

@@ -789,3 +789,14 @@ ul.footer-links li a {
      object-position: center;
   margin: 0 0 20px 0;
 }
+
+.nothing {
+  font-family: "Lora", serif;
+  font-style: italic;
+}
+
+.card-img-top {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

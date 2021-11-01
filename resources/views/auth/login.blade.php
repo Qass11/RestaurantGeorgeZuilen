@@ -10,6 +10,12 @@
                 </p>
             </div>
 
+            @if (session()->has('error'))
+                <p>
+                    {{ session('error') }}
+                </p>
+            @endif
+
             <div class="card-body">
                 @csrf
 

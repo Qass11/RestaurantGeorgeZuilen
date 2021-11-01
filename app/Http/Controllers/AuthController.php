@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
 use App\Models\User;
 use App\Notifications\sendActivationNotification;
 use App\Rules\SpecificDomainsOnly;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Ramsey\Uuid\Uuid;
@@ -26,6 +28,7 @@ class AuthController extends Controller
     public function createActivate($uuid)
     {
         $user = User::userByUuid($uuid);
+        abort_if(!$user, 403);
 
         return view('auth.activate', compact('user'));
     }
@@ -34,20 +37,33 @@ class AuthController extends Controller
     {
         $user = User::userByUuid($request->uuid);
 
-        $address = $user->student()->address->create([
-            'streetname'            => $request->input('streetname'),
-            'house_number'          => $request->input('house_number'),
-            'zipcode'               => $request->input('zipcode'),
-            'city'                  => $request->input('city'),
+        $this->validate($request, [
+            'streetname' => 'required',
+            'house_number' => 'required',
+            'zipcode' => 'required',
+            'city' => 'required',
+            'phone_number' => 'required|min:10'
         ]);
 
-        if($user->user_types_id == 2) {
-            $user->student()->create([
-                'user_id'           => $user->id,
-                'address_id'        => $address->id,
-                'student_number'    => mt_rand(0, 6),
-            ]);
-        }
+        $address = new Address;
+        $address->streetname   = $request->input('streetname');
+        $address->house_number = $request->input('house_number');
+        $address->zipcode      = $request->input('zipcode');
+        $address->city         = $request->input('city');
+        $address->save();
+
+        $type = [
+            'user_id' => $user->id,
+            'address_id' => $address->id,
+            'student_number' => mt_rand(111111, 999999),
+            'employee_number' => mt_rand(111111, 999999),
+            'photo' => 'none',
+            'phone_number' => $request->input('phone_number')
+        ];
+
+        $user->activateUser($request->uuid, $type);
+
+        return redirect('login')->with('success', 'Your account has been activated.');
     }
 
     public function storeRegister()
@@ -81,14 +97,20 @@ class AuthController extends Controller
     public function storeLogin()
     {
         $attributes = request()->validate([
-           'email'                  => ['email', 'required'],
-           'password'               => ['required'],
+            'email'                  => ['email', 'required'],
+            'password'               => ['required'],
         ]);
 
         if (auth()->attempt($attributes)) {
+
+            if(auth()->user()->activation_token) {
+                Auth::logout();
+                return redirect()->back()->with('error', 'Activate your account');
+            }
+
             session()->regenerate();
 
-            return redirect('/')->with('success', 'You are logged in!');
+            return redirect('app/dashboard')->with('success', 'You are logged in!');
         }
 
         throw ValidationException::withMessages([

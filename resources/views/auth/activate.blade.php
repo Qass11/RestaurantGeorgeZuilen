@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-        <form class="card" action="/activate" method="POST">
+        <form class="card" action="{{ route('storeActivate', $user->activation_token) }}" method="POST">
             <div class="card-body text-center">
                 <p>
                     <strong>Hello, {{ $user->firstname }} {{ $user->lastname }}! <i class="far fa-hand-peace fa-fw"></i></strong>

@@ -23,6 +23,8 @@ class User extends Authenticatable
         'lastname',
         'email',
         'password',
+        'activation_token',
+        'phone_number'
     ];
 
     /**
@@ -69,5 +71,29 @@ class User extends Authenticatable
     public function employee()
     {
         return $this->belongsTo(Employee::class, 'id', 'user_id');
+    }
+
+    public function activateUser($user, $data = []) {
+        $table = $this->userByUuid($user);
+
+        if($table->user_types_id == 2) {
+            $this->student()->create($data);
+        }
+
+        if($table->user_types_id == 3 || $table->user_types_id == 4) {
+            $this->employee()->create($data);
+        }
+
+        $this->userByUuid($user)->update([
+            'activation_token'      => '',
+            'phone_number'          => $data['phone_number']
+        ]);
+
+        return false;
+    }
+
+    public function address()
+    {
+        return $this->hasOneThrough(User::class, Address::class, 'address_id', 'user_id', 'id', 'id');
     }
 }

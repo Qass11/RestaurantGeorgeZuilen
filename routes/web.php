@@ -10,6 +10,8 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CareerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoronaController;
+use App\Http\Controllers\PrivacyController;
+
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('about');
@@ -33,3 +35,4 @@ Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); /
 
 Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate'); // Activate page
 Route::post('activate', [AuthController::class, 'storeActivate'])->name('storeActivate'); // Send activate form.
+Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');

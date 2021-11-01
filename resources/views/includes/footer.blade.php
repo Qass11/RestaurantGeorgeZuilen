@@ -91,6 +91,9 @@
             <a href="{{ route('event') }}">Events</a>
         </li>
         <li>
+            <a href="{{ route('privacy') }}">Privacy</a>
+        </li>
+        <li>
             <a href="{{ route('login') }}">Login</a>
         </li>
         <li>

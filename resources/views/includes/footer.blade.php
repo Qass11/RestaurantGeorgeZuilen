@@ -37,7 +37,7 @@
                 <div class="col-sm-12 col-md">
                     <i class="fal fa-map-marked-alt fa-fw icon-george"></i>
                     <strong>Location</strong>
-                    Daltonlaan 300, 3584 BK Utrecht
+                    <a href=”https://goo.gl/maps/DfbskVpvY9uA6YYH8” class="footer-links1">Daltonlaan 300, 3584 BK Utrecht</a>
                 </div>
             </div>
         </div>
@@ -63,13 +63,13 @@
                 <div class="col-sm-12 col-md">
                     <i class="fal fa-at fa-fw icon-george"></i>
                     <strong>E-mail</strong>
-                    hello@georgezuilen.nl
+                    <a href="mailto:hello@georgezuilen.nl?SUBJECT=Contact met George Zuilen" class="footer-links1">hello@georgezuilen.nl</a>
                 </div>
 
                 <div class="col-sm-12 col-md">
                     <i class="fal fa-phone-office fa-fw icon-george"></i>
                     <strong>Phone</strong>
-                    030 12 34 56 7
+                    <a href=”tel:0301234567” class="footer-links1">0301234567</a>
                 </div>
             </div>
         </div>

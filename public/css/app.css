@@ -499,6 +499,15 @@ p.width95 {
   border-top: 1px solid #dee2e6;
 }
 
+.footer-links1 {
+  color: rgb(var(--colorText));
+  text-decoration: none;
+}
+.footer-links1:hover {
+  color: rgb(var(--colorText));
+  text-decoration: underline;
+}
+
 html, body {
   margin: 0;
   padding: 0;

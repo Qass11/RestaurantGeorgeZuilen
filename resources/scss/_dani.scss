@@ -1,3 +1,5 @@
+@import "root";
+@import "fonts";
 .map-container-6 iframe{
     left:0;
     top:0;
@@ -20,6 +22,7 @@
     object-fit:contain;
     margin: 20px;
     box-shadow: 2px 2px 4px 4px gray;
+    overflow: hidden;
 }
 .activate-foto{
     border-radius: 20px;
@@ -28,3 +31,73 @@
     object-fit: contain;
     box-shadow: 2px 2px 4px 4px gray;
 }
+
+.img-header{
+    background: linear-gradient(65deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://www.we-heart.com/upload-images/sangeorgeamsterdam2@2x.jpg);
+    background-position: 110%, center center;
+    background-size: auto 100%, cover;
+    background-repeat: no-repeat, no-repeat;
+    & strong{
+        overflow: hidden;
+
+    }
+}
+
+img{
+    display: none;
+}
+a{
+    text-decoration: none;
+    list-style: none;
+    color: #c3c3c3;
+}
+a:hover{
+    color: #000;
+}
+.naam:hover{
+    img{
+        display: block;
+        width: 300px;
+        height: 300px;
+        margin: -40px;
+        margin-left: 900px;
+        position: absolute;
+        animation: bewegen 1s linear;
+        box-shadow: lightblue 2px 2px 4px 4px;
+        border-radius: 10px;
+    }
+}
+
+@keyframes bewegen{
+    0%, 100%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 3;
+    }
+}
+
+.style-letter{
+    font-family: var(--fontBase), bolder;
+    color: #fff;
+    font-size: 50px;
+}
+
+#logo{
+    transform: rotate(90deg);
+    position: fixed;
+    margin: 300px 0px 0px 0px;
+}
+
+.zicht{
+    animation: zicht 1s linear;
+}
+@keyframes zicht {
+    0%, 100%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+

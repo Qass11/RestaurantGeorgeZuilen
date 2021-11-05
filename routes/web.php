@@ -11,6 +11,8 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CareerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoronaController;
+use App\Http\Controllers\MadeController;
+
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('about');
@@ -32,9 +34,8 @@ Route::post('login', [AuthController::class, 'storeLogin'])->middleware('guest')
 
 Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); // Log out if logged in.
 
-Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate'); // Activate page
-Route::post('activate/{uuid}', [AuthController::class, 'storeActivate'])->name('storeActivate'); // Send activate form.
+Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate');
 
-Route::prefix('app')->name('app.')->group(function () {
-    Route::get('dashboard', [AppController::class, 'dashboard'])->name('dashboard');
-});
+Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate');
+
+Route::get('made', [MadeController::class, 'index'])->name('made');

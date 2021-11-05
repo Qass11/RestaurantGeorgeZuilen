@@ -3,6 +3,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 :root {
   --fontBase: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --fontSize: 15px;
@@ -348,6 +353,69 @@ p.width95 {
   color: rgba(0, 0, 0, 0);
 }
 
+:root {
+  --fontBase: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --fontSize: 15px;
+  --colorBackground: 255, 255, 255;
+  --colorText: 68, 68, 68;
+}
+
+@font-face {
+  font-family: "AkzidenzGrotesk";
+  src: url(/fonts/AkzidenzGrotesk-Black.woff2?8683c6c4d773ec0c4c8bd04410e57686) format("woff2"), url(/fonts/AkzidenzGrotesk-Black.woff?f187268ad33d2474e84bbcb6f19647df) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AkzidenzGrotesk";
+  src: url(/fonts/AkzidenzGrotesk-Light.woff2?f9f42f074bc607fe235efc60e74ef97d) format("woff2"), url(/fonts/AkzidenzGrotesk-Light.woff?d786a12182e574b20a70a504d76251f8) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AkzidenzGrotesk";
+  src: url(/fonts/AkzidenzGrotesk-Roman.woff2?4b3a1230643d71d8fe88094b52122d24) format("woff2"), url(/fonts/AkzidenzGrotesk-Roman.woff?877ce98a3303b72a48d1baf38e5fac03) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AkzidenzGrotesk";
+  src: url(/fonts/AkzidenzGrotesk-Bold.woff2?a4738359b44124064f97f1ed5d446bd2) format("woff2"), url(/fonts/AkzidenzGrotesk-Bold.woff?c84c66759e80804b73939e8ede6fd5b2) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+p {
+  font-family: "Lora", serif;
+}
+
 .map-container-6 iframe {
   left: 0;
   top: 0;
@@ -370,6 +438,7 @@ p.width95 {
      object-fit: contain;
   margin: 20px;
   box-shadow: 2px 2px 4px 4px gray;
+  overflow: hidden;
 }
 
 .activate-foto {
@@ -381,6 +450,94 @@ p.width95 {
   box-shadow: 2px 2px 4px 4px gray;
 }
 
+.img-header {
+  background: linear-gradient(65deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://www.we-heart.com/upload-images/sangeorgeamsterdam2@2x.jpg);
+  background-position: 110%, center center;
+  background-size: auto 100%, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+.img-header strong {
+  overflow: hidden;
+}
+
+img {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: #c3c3c3;
+}
+
+a:hover {
+  color: #000;
+}
+
+.naam:hover img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: -40px;
+  margin-left: 900px;
+  position: absolute;
+  -webkit-animation: bewegen 1s linear;
+          animation: bewegen 1s linear;
+  box-shadow: lightblue 2px 2px 4px 4px;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes bewegen {
+  0%, 100% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 3;
+  }
+}
+
+@keyframes bewegen {
+  0%, 100% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 3;
+  }
+}
+.style-letter {
+  font-family: var(--fontBase), bolder;
+  color: #fff;
+  font-size: 50px;
+}
+
+#logo {
+  transform: rotate(90deg);
+  position: fixed;
+  margin: 300px 0px 0px 0px;
+}
+
+.zicht {
+  -webkit-animation: zicht 1s linear;
+          animation: zicht 1s linear;
+}
+
+@-webkit-keyframes zicht {
+  0%, 100% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zicht {
+  0%, 100% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .employee {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border-radius: 5px;

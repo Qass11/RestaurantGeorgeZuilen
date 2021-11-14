@@ -563,6 +563,31 @@ a:hover {
   font-style: italic;
 }
 
+.gift-voucher {
+  padding: 50px;
+}
+
+.gift-voucher img {
+  border-radius: 5px;
+  width: 400px;
+  margin: 0 0 20px 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.gift-voucher img:hover {
+  filter: grayscale(100%);
+}
+
+.gift-shop {
+  text-align: center;
+  color: black;
+}
+
+.gift-shop H1 {
+  color: black;
+  font-size: 40px;
+  font-family: "Lora", serif;
+}
+
 .image-book {
   height: 120px;
   -o-object-fit: cover;

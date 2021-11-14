@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
     "/css/panel.css": "/css/panel.css",
     "/images/Mohammed.jpg": "/images/Mohammed.jpg",
     "/images/Qassim.jpeg": "/images/Qassim.jpeg",
@@ -21,5 +22,5 @@
     "/fonts/AkzidenzGrotesk-Light.woff2": "/fonts/AkzidenzGrotesk-Light.woff2",
     "/fonts/AkzidenzGrotesk-Roman.woff": "/fonts/AkzidenzGrotesk-Roman.woff",
     "/fonts/AkzidenzGrotesk-Roman.woff2": "/fonts/AkzidenzGrotesk-Roman.woff2",
-    "/css/app.css": "/css/app.css"
+    "/images/mitchel.jpg": "/images/mitchel.jpg"
 }

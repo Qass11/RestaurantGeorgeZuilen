@@ -3,11 +3,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 :root {
   --fontBase: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --fontSize: 15px;
@@ -353,69 +348,6 @@ p.width95 {
   color: rgba(0, 0, 0, 0);
 }
 
-:root {
-  --fontBase: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --fontSize: 15px;
-  --colorBackground: 255, 255, 255;
-  --colorText: 68, 68, 68;
-}
-
-@font-face {
-  font-family: "AkzidenzGrotesk";
-  src: url(/fonts/AkzidenzGrotesk-Black.woff2?8683c6c4d773ec0c4c8bd04410e57686) format("woff2"), url(/fonts/AkzidenzGrotesk-Black.woff?f187268ad33d2474e84bbcb6f19647df) format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AkzidenzGrotesk";
-  src: url(/fonts/AkzidenzGrotesk-Light.woff2?f9f42f074bc607fe235efc60e74ef97d) format("woff2"), url(/fonts/AkzidenzGrotesk-Light.woff?d786a12182e574b20a70a504d76251f8) format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AkzidenzGrotesk";
-  src: url(/fonts/AkzidenzGrotesk-Roman.woff2?4b3a1230643d71d8fe88094b52122d24) format("woff2"), url(/fonts/AkzidenzGrotesk-Roman.woff?877ce98a3303b72a48d1baf38e5fac03) format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AkzidenzGrotesk";
-  src: url(/fonts/AkzidenzGrotesk-Bold.woff2?a4738359b44124064f97f1ed5d446bd2) format("woff2"), url(/fonts/AkzidenzGrotesk-Bold.woff?c84c66759e80804b73939e8ede6fd5b2) format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-.fade-in {
-  animation: fadeIn ease 5s;
-  -webkit-animation: fadeIn ease 5s;
-  -moz-animation: fadeIn ease 5s;
-  -o-animation: fadeIn ease 5s;
-  -ms-animation: fadeIn ease 5s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-p {
-  font-family: "Lora", serif;
-}
-
 .map-container-6 iframe {
   left: 0;
   top: 0;
@@ -458,10 +390,6 @@ p {
 }
 .img-header strong {
   overflow: hidden;
-}
-
-img {
-  display: none;
 }
 
 a {
@@ -543,6 +471,9 @@ a:hover {
   border-radius: 5px;
   margin: 0 0 20px 0;
   width: 150px;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .foto2 {

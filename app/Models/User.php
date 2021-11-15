@@ -63,6 +63,11 @@ class User extends Authenticatable
         return static::where('activation_token', $uuid)->first();
     }
 
+    public function role()
+    {
+        return $this->belongsTo(UserType::class, 'user_types_id', 'id');
+    }
+
     public function student()
     {
         return $this->belongsTo(Student::class, 'id', 'user_id');

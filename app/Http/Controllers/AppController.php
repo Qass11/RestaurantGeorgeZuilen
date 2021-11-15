@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
@@ -37,6 +38,12 @@ class AppController extends Controller
 
     public function usersOverview()
     {
-        return view('app.users.overview');
+        $students = User::where('user_types_id', 2)->get()->all();
+        $employees = User::whereIn('user_types_id', [3, 4, 5])->get()->all();
+
+        return view('app.users.overview')->with([
+            'students' => $students,
+            'employees' => $employees,
+        ]);
     }
 }

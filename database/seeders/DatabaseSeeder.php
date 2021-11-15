@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             MenuItemsSeeder::class,
             OpeningHoursSeeder::class,
             GallerySeeder::class,
+            CoursesSeeder::class,
         ]);
     }
 }

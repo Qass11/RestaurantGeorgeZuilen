@@ -11,9 +11,9 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CareerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoronaController;
+use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\GiftController;
 use App\Http\Controllers\MadeController;
-
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('about');
@@ -26,6 +26,7 @@ Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('corona', [CoronaController::class, 'index'])->name('corona');
 Route::get('made', [MadeController::class, 'index'])->name('made');
 Route::get('gift', [GiftController::class, 'index'])->name('gift');
+Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');
 
 Route::get('create_account', [AuthController::class, 'createRegister'])->name('register')->middleware('guest'); // Register page
 Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form

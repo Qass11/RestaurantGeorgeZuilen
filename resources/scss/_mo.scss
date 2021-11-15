@@ -1,8 +1,12 @@
+
+
 .employee {
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
     border-radius: 5px;
     margin: 0 0 20px 0;
     width: 150px;
+    height: 175px;
+    object-fit: cover;
 }
 
 .foto2 {
@@ -52,6 +56,9 @@
     text-align: center;
 }
 
+
+
+
 .corona-text h1 {
 
     font-size: 20px
@@ -71,6 +78,9 @@
     font-size: 20px;
     text-align: center;
 }
+
+
+
 
 .corona-info {
     text-align: center;
@@ -92,5 +102,36 @@
         &:hover {
             font-style: italic;
         }
+
     }
+}
+.gift-voucher{
+    padding: 50px;
+}
+
+.gift-voucher {
+
+    img {
+        border-radius: 5px;
+        width: 400px;
+        margin: 0 0 20px 0;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+
+        &:hover {
+            filter: grayscale(100%);
+        }
+    }
+}
+.gift-shop{
+
+    text-align: center;
+    color: black;
+
+}
+
+.gift-shop H1{
+    color: black;
+    font-size: 40px;
+    font-family: "Lora", serif;
+
 }

@@ -15,4 +15,28 @@ class AppController extends Controller
     {
         return view('app.dashboard');
     }
+
+    public function coursesOverview()
+    {
+        return view('app.courses.overview');
+    }
+
+    public function coursesSubscribe(Request $request)
+    {
+        if($request->isMethod('post')) {
+
+        }
+
+        return view('app.courses.subscribe');
+    }
+
+    public function reservationsOverview()
+    {
+        return view('app.reservations.overview');
+    }
+
+    public function usersOverview()
+    {
+        return view('app.users.overview');
+    }
 }

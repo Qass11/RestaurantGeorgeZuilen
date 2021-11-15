@@ -1,8 +1,8 @@
 @extends('layouts.panel')
-@section('pagename', 'Dashboard')
+@section('pagename', 'Courses Subscribe')
 
 @section('content')
     <div class="container border-bottom">
-        {{ auth()->user()->firstname }}
+        Courses Subscribe
     </div>
 @endsection

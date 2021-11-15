@@ -1,8 +1,8 @@
 @extends('layouts.panel')
-@section('pagename', 'Dashboard')
+@section('pagename', 'Reservations Overview')
 
 @section('content')
     <div class="container border-bottom">
-        {{ auth()->user()->firstname }}
+        Reservations Overview
     </div>
 @endsection

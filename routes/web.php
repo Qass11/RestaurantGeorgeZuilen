@@ -33,5 +33,26 @@ Route::post('create_account', [AuthController::class, 'storeRegister'])->middlew
 Route::get('login', [AuthController::class, 'createLogin'])->name('login')->middleware('guest'); // Login page
 Route::post('login', [AuthController::class, 'storeLogin'])->middleware('guest'); // Send the login form
 Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); // Log out if logged in.
-Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate');
-Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate');
+Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate'); // Activate page
+Route::post('activate/{uuid}', [AuthController::class, 'storeActivate'])->name('storeActivate'); // Send activate form.
+
+Route::prefix('app')->name('app.')->group(function () {
+    Route::get('dashboard', [AppController::class, 'dashboard'])->name('dashboard');
+});
+
+Route::prefix('app')->name('app.')->group(function () {
+    Route::get('/', [AppController::class, 'dashboard'])->name('dashboard');
+
+    Route::prefix('courses')->name('courses.')->group(function () {
+        Route::get('/', [AppController::class, 'coursesOverview'])->name('overview');
+        Route::match(array('get', 'post'), 'subscribe', [AppController::class, 'coursesSubscribe'])->name('subscribe');
+    });
+
+    Route::prefix('reservations')->name('reservations.')->group(function () {
+       Route::get('/', [AppController::class, 'reservationsOverview'])->name('overview');
+    });
+
+    Route::prefix('users')->name('users.')->group(function () {
+        Route::get('/', [AppController::class, 'usersOverview'])->name('overview');
+    });
+});

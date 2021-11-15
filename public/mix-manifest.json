@@ -13,11 +13,6 @@
     "/images/career.jpeg": "/images/career.jpeg",
     "/images/cta.jpeg": "/images/cta.jpeg",
     "/images/cta1.jpg": "/images/cta1.jpg",
-    "/images/img.png": "/images/img.png",
-    "/images/img_1.png": "/images/img_1.png",
-    "/images/img_2.png": "/images/img_2.png",
-    "/images/img_3.png": "/images/img_3.png",
-    "/images/privacy.jpg": "/images/privacy.jpg",
     "/images/test-image.jpg": "/images/test-image.jpg",
     "/fonts/AkzidenzGrotesk-Black.woff": "/fonts/AkzidenzGrotesk-Black.woff",
     "/fonts/AkzidenzGrotesk-Black.woff2": "/fonts/AkzidenzGrotesk-Black.woff2",
@@ -27,5 +22,10 @@
     "/fonts/AkzidenzGrotesk-Light.woff2": "/fonts/AkzidenzGrotesk-Light.woff2",
     "/fonts/AkzidenzGrotesk-Roman.woff": "/fonts/AkzidenzGrotesk-Roman.woff",
     "/fonts/AkzidenzGrotesk-Roman.woff2": "/fonts/AkzidenzGrotesk-Roman.woff2",
-    "/images/mitchel.jpg": "/images/mitchel.jpg"
+    "/images/mitchel.jpg": "/images/mitchel.jpg",
+    "/images/img.png": "/images/img.png",
+    "/images/img_1.png": "/images/img_1.png",
+    "/images/img_2.png": "/images/img_2.png",
+    "/images/img_3.png": "/images/img_3.png",
+    "/images/privacy.jpg": "/images/privacy.jpg"
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Reservation;
+use App\Notifications\sendReservationNotification;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -11,18 +13,23 @@ class ReservationController extends Controller
     {
         if($request->isMethod('post')) {
             $attributes = request()->validate([
-                'type'          => ['required'],
-                'persons'          => ['required'],
-                'date'          => ['required'],
-                'time'          => ['required'],
-                'firstname'          => ['required'],
-                'lastname'          => ['required'],
-                'email'          => ['required'],
-                'phone_number'          => ['required'],
-                'comments'          => ['required'],
+                'type'              => ['required'],
+                'persons'           => ['required'],
+                'date'              => ['required'],
+                'time'              => ['required'],
+                'firstname'         => ['required', 'min:3', 'max:255'],
+                'lastname'          => ['required', 'min:3', 'max:255'],
+                'email'             => ['email', 'required'],
+                'phone_number'      => ['required', 'min:10', 'max:10'],
+                'comments'          => [],
             ]);
 
-            dd($attributes);
+            $attributes['date'] = date('d-m-Y', strtotime($attributes['date']));
+
+            $reservation = Reservation::create($attributes);
+            $reservation->notify(new sendReservationNotification($reservation));
+
+            return redirect('/reservation')->with('success', 'Reservation succcesfull');
         }
 
         return view('pages.reservation');

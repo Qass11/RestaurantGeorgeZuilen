@@ -23,7 +23,7 @@
             </a>
         </li>
         <li>
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#bookATable">
+            <a class="nav-link {{ checkActive('reservation') }}" href="{{ route('reservation') }}">
                 <i class="fal fa-calendar-plus fa-fw"></i> @lang('george.navigation.table')
             </a>
         </li>

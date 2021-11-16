@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('courses_subscribed', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('workday_id');
+            $table->foreignId('courses_id');
             $table->timestamps();
         });
     }

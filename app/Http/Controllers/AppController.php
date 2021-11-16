@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -19,7 +20,11 @@ class AppController extends Controller
 
     public function reservationsOverview()
     {
-        return view('app.reservations.overview');
+        $reservations = Reservation::get()->all();
+
+        return view('app.reservations.overview')->with([
+            'reservations' => $reservations,
+        ]);
     }
 
     public function usersOverview()

@@ -3,6 +3,11 @@
 
 @section('content')
     <div class="container border-bottom">
-        Reservations Overview
+        @forelse($reservations as $reservation)
+            {{ $reservation->id }}
+            {{ $reservation->type }}
+        @empty
+            Nothing to show
+        @endforelse
     </div>
 @endsection

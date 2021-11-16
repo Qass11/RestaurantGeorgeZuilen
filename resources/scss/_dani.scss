@@ -101,3 +101,19 @@ a:hover{
     }
 }
 
+
+.controller{
+    img{
+        animation: uitzicht 2s linear;
+    }
+}
+
+@keyframes uitzicht {
+    0%, 100%{
+    opacity: 3;
+}
+    50%{
+        opacity: 0;
+    }
+}
+

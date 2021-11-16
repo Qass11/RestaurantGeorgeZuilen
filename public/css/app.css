@@ -538,6 +538,28 @@ a:hover {
     opacity: 1;
   }
 }
+.controller img {
+  -webkit-animation: uitzicht 2s linear;
+          animation: uitzicht 2s linear;
+}
+
+@-webkit-keyframes uitzicht {
+  0%, 100% {
+    opacity: 3;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes uitzicht {
+  0%, 100% {
+    opacity: 3;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 .employee {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border-radius: 5px;

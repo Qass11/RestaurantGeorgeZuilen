@@ -11,6 +11,18 @@
     "/images/career.jpeg": "/images/career.jpeg",
     "/images/cta.jpeg": "/images/cta.jpeg",
     "/images/cta1.jpg": "/images/cta1.jpg",
+<<<<<<< Updated upstream
+=======
+    "/images/img.png": "/images/img.png",
+    "/images/img_1.png": "/images/img_1.png",
+    "/images/img_2.png": "/images/img_2.png",
+    "/images/img_3.png": "/images/img_3.png",
+    "/images/mitchel.jpg": "/images/mitchel.jpg",
+    "/images/Mohammed.jpg": "/images/Mohammed.jpg",
+    "/images/privacy.jpg": "/images/privacy.jpg",
+    "/images/Qassim.jpeg": "/images/Qassim.jpeg",
+    "/images/test-image.jpg": "/images/test-image.jpg",
+>>>>>>> Stashed changes
     "/fonts/AkzidenzGrotesk-Black.woff": "/fonts/AkzidenzGrotesk-Black.woff",
     "/fonts/AkzidenzGrotesk-Black.woff2": "/fonts/AkzidenzGrotesk-Black.woff2",
     "/fonts/AkzidenzGrotesk-Bold.woff": "/fonts/AkzidenzGrotesk-Bold.woff",

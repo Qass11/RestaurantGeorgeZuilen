@@ -37,7 +37,7 @@
                 <div class="col-sm-12 col-md">
                     <i class="fal fa-map-marked-alt fa-fw icon-george"></i>
                     <strong>Location</strong>
-                    <a href=”https://goo.gl/maps/DfbskVpvY9uA6YYH8” class="footer-links1">Daltonlaan 300, 3584 BK Utrecht</a>
+                    <a href="https://goo.gl/maps/DfbskVpvY9uA6YYH8" target="_blank" class="footer-links1">Daltonlaan 300, 3584 BK Utrecht</a>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
                 <div class="col-sm-12 col-md">
                     <i class="fal fa-phone-office fa-fw icon-george"></i>
                     <strong>Phone</strong>
-                    <a href=”tel:0301234567” class="footer-links1">0301234567</a>
+                    <a href="tel:0301234567" class="footer-links1">0301234567</a>
                 </div>
             </div>
         </div>

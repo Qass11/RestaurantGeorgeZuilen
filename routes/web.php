@@ -14,6 +14,7 @@ use App\Http\Controllers\CoronaController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\GiftController;
 use App\Http\Controllers\MadeController;
+use App\Http\Controllers\CoursesController;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('about');
@@ -44,8 +45,8 @@ Route::prefix('app')->name('app.')->group(function () {
     Route::get('/', [AppController::class, 'dashboard'])->name('dashboard');
 
     Route::prefix('courses')->name('courses.')->group(function () {
-        Route::get('/', [AppController::class, 'coursesOverview'])->name('overview');
-        Route::match(array('get', 'post'), 'subscribe', [AppController::class, 'coursesSubscribe'])->name('subscribe');
+        Route::get('/', [CoursesController::class, 'coursesOverview'])->name('overview');
+        Route::match(array('get', 'post'), 'subscribe', [CoursesController::class, 'coursesSubscribe'])->name('subscribe');
     });
 
     Route::prefix('reservations')->name('reservations.')->group(function () {

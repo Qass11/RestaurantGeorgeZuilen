@@ -162,6 +162,23 @@
                 </div>
 
                 <div class="col-sm-12 col-md-12">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="advertising" name="advertising" required>
+                            <option value="">Make a choice</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <label for="advertising">Would you like to receive advertising?</label>
+
+                        @error('advertising')
+                        <div id="advertisingHelp" class="form-text color-red">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-12">
                     <div class="d-grid gap-2">
                         <button class="btn btn-dark" type="submit">Book now</button>
                     </div>

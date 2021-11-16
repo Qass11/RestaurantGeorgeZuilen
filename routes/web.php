@@ -10,6 +10,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoronaController;
 use App\Http\Controllers\PrivacyController;
@@ -28,6 +29,7 @@ Route::get('corona', [CoronaController::class, 'index'])->name('corona');
 Route::get('made', [MadeController::class, 'index'])->name('made');
 Route::get('gift', [GiftController::class, 'index'])->name('gift');
 Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');
+Route::get('reservation', [ReservationController::class, 'index'])->name('reservation');
 
 Route::get('create_account', [AuthController::class, 'createRegister'])->name('register')->middleware('guest'); // Register page
 Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form

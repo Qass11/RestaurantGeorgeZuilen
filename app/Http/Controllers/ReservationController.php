@@ -29,7 +29,7 @@ class ReservationController extends Controller
             $reservation = Reservation::create($attributes);
             $reservation->notify(new sendReservationNotification($reservation));
 
-            return redirect('/reservation')->with('success', 'Reservation succcesfull');
+            return redirect('/reservation')->with('success', 'Your reservation has been successfully processed, you will receive a confirmation by email.');
         }
 
         return view('pages.reservation');

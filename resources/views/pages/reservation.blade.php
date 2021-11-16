@@ -68,7 +68,7 @@
 
                 <div class="col-sm-12 col-md-6">
                     <div class="form-floating mb-3">
-                        <input type="date" min="01-01-2021" max="01-01-2023" class="form-control @error('date') is-invalid @enderror" id="date" name="date" placeholder="04-10-2021" required>
+                        <input type="date" min="01-01-2021" max="01-01-2023" class="form-control @error('date') is-invalid @enderror" id="date" name="date" placeholder="04-10-2021" value="{{ old('date') }}" required>
                         <label for="bookDate">Date</label>
 
                         @error('date')
@@ -81,7 +81,7 @@
 
                 <div class="col-sm-12 col-md-6">
                     <div class="form-floating mb-3">
-                        <input type="time" min="18:00" max="21:00" class="form-control @error('time') is-invalid @enderror" id="time" name="time" placeholder="14:15" required>
+                        <input type="time" min="18:00" max="21:00" class="form-control @error('time') is-invalid @enderror" id="time" name="time" placeholder="14:15" value="{{ old('time') }}" required>
                         <label for="bookDate">Time</label>
 
                         @error('time')

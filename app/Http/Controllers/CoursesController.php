@@ -19,7 +19,7 @@ class CoursesController extends Controller
     public function coursesSubscribe(Request $request)
     {
         if($request->isMethod('post')) {
-
+            // Hier je form opbouwen Dani & Mo.
         }
 
         return view('app.courses.subscribe');

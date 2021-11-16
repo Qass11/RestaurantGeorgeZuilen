@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone_number');
             $table->longText('comments')->nullable();
+            $table->string('advertising');
             $table->timestamps();
         });
     }

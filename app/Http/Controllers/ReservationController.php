@@ -22,6 +22,7 @@ class ReservationController extends Controller
                 'email'             => ['email', 'required'],
                 'phone_number'      => ['required', 'min:10', 'max:10'],
                 'comments'          => [],
+                'advertising'       => ['required'],
             ]);
 
             $attributes['date'] = date('d-m-Y', strtotime($attributes['date']));

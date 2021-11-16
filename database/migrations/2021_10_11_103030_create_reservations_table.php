@@ -15,11 +15,15 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->tinyInteger('type');
-            $table->tinyInteger('persons');
+            $table->foreignId('user_types_id')->default(1);
+            $table->string('type');
+            $table->string('persons');
             $table->string('date');
             $table->string('time');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email');
+            $table->string('phone_number');
             $table->longText('comments')->nullable();
             $table->timestamps();
         });

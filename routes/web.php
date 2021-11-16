@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\IndexController;
@@ -14,7 +15,6 @@ use App\Http\Controllers\CoronaController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\GiftController;
 use App\Http\Controllers\MadeController;
-use App\Http\Controllers\CoursesController;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('about', [AboutController::class, 'index'])->name('about');

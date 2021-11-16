@@ -15,10 +15,8 @@ return new class extends Migration
     {
         Schema::create('reservations_review', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
             $table->foreignId('reservation_id');
-            $table->foreignId('reservation_review_reaction_id')->nullable()->constrained('reservations_review');
-            $table->string('rating')->nullable();
+            $table->string('rating');
             $table->longText('review_text');
             $table->timestamps();
         });

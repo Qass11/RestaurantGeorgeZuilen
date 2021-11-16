@@ -21,6 +21,7 @@ class Reservation extends Model
         'lastname',
         'email',
         'phone_number',
-        'comments'
+        'comments',
+        'advertising'
     ];
 }

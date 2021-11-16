@@ -29,7 +29,7 @@ Route::get('corona', [CoronaController::class, 'index'])->name('corona');
 Route::get('made', [MadeController::class, 'index'])->name('made');
 Route::get('gift', [GiftController::class, 'index'])->name('gift');
 Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');
-Route::get('reservation', [ReservationController::class, 'index'])->name('reservation');
+Route::match(array('get', 'post'), 'reservation', [ReservationController::class, 'index'])->name('reservation');
 
 Route::get('create_account', [AuthController::class, 'createRegister'])->name('register')->middleware('guest'); // Register page
 Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form

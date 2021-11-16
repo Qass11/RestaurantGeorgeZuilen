@@ -13,7 +13,6 @@
 <body>
 
 {{--    @include('includes.preloader')--}}
-    @include('includes.modals')
     @include('includes.navigation')
     @yield('content')
     @include('includes.footer')

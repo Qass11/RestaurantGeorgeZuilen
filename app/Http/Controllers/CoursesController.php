@@ -21,6 +21,7 @@ class CoursesController extends Controller
         if($request->isMethod('post')) {
             // Hier je form opbouwen Dani & Mo.
             // Niet verwijderen.
+
         }
 
         return view('app.courses.subscribe');

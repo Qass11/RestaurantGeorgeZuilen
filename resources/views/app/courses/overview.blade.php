@@ -3,98 +3,98 @@
 
 @section('content')
     <div class="container mt-3 pb-5">
-       <form method="post" action="/login">
-
-
         <h1 class="text-corona text-center">Courses</h1>
         <div class="row">
             <!-- de eertste card -->
             <div class="col-sm-3 col-md-3">
-                <a href="#">
-                    <div class="card" style="width: 18rem;">
+                <form action="courses/subscribe" method="post">
+                    @csrf
+                    <div class="card">
                         <img src="{{ asset('images/general.jpg') }}" style="height: 200px" class="img-fluid" alt="...">
                         <div class="card-body">
 
-                            <h3><input type="text" name="General" value="General" style="border:none;outline: none"></h3>
-                            <p class="card-text">Course for General.</p>
+                            <h3>{{$courses[0]->name}}</h3>
+                            <p class="card-text">{{ $courses[0]->description }}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <br>
                             <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class="text-primary"> 5</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class="text-primary"> 5</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class="text-primary"> 5</span></li>
+                            <li class="list-group-item">Lessons-Chef:<span class="text-primary"> {{ $courses[0]->lessons_chef }}</span></li>
+                            <li class="list-group-item">Lessons-Bartender<span class="text-primary"> {{$courses[0]->lessons_bartender}}</span></li>
+                            <li class="list-group-item">Lessons-Waiter:<span class="text-primary"> {{$courses[0]->lessons_waiter}}</span></li>
                         </ul>
-                        <button type="submit" class="btn btn-primary my-2">Choose for this pakket</button>
+                        <input type="hidden" name="courses_id" value="{{$courses[0]->id}}">
+                        <button type="submit" class="btn btn-dark my-2">Choose for this pakket</button>
                     </div>
-                </a>
+                </form>
             </div>
 
             <!-- de tweede card -->
             <div class="col-sm-3 col-md-3">
-                <a href="#">
-                    <div class="card" style="width: 18rem;">
+                <form action="courses/subscribe" method="post">
+                    @csrf
+                    <div class="card">
                         <img src="{{ asset('images/bartender.jpg') }}" style="height: 200px" class="img-fluid" alt="...">
                         <div class="card-body">
-                            <h3><input type="text" name="Bartender" value="Bartender" style="border:none;outline: none"></h3>
-                            <p class="card-text">Course for Bartender.</p>
+                            <h3>{{$courses[1]->name}}</h3>                            <p class="card-text">{{$courses[1]->description}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <br>
                             <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class="text-danger"> 3</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class="text-danger"> 9</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class="text-danger"> 3</span></li>
+                            <li class="list-group-item">Lessons-Chef:<span class="text-danger">{{$courses[1]->lessons_chef}}</span></li>
+                            <li class="list-group-item">Lessons-Bartender<span class="text-danger"> {{$courses[1]->lessons_bartender}}</span></li>
+                            <li class="list-group-item">Lessons-Waiter:<span class="text-danger"> {{$courses[1]->lessons_waiter}}</span></li>
                         </ul>
-                        <button type="submit" class="btn btn-danger my-2">Choose for this pakket</button>
+                        <input type="hidden" name="courses_id" value="{{$courses[1]->id}}">
+                        <button type="submit" class="btn btn-dark my-2">Choose for this pakket</button>
                     </div>
-                </a>
+                </form>
             </div>
 
             <!-- de derde card -->
             <div class="col-sm-3 col-md-3">
-                <a href="">
-                    <div class="card" style="width: 18rem;">
+                <form action="courses/subscribe" method="post">
+                    @csrf
+                    <div class="card">
                         <img src="{{ asset('images/waiter.jpg') }}" class="img-fluid"  style="height: 200px" alt="...">
                         <div class="card-body">
-                            <h3><input type="text" name="Waiter" value="Waiter" style="border:none;outline: none"></h3>
-                            <p class="card-text">Course for Waiter.</p>
+                            <h3>{{$courses[2]->name}}</h3>                            <p class="card-text">{{$courses[2]->description}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <br>
                             <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class=""> 3</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class=""> 2</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class=""> 10</span></li>
+                            <li class="list-group-item">Lessons-Chef:<span class=""> {{$courses[2]->lessons_chef}}</span></li>
+                            <li class="list-group-item">Lessons-Bartender<span class=""> {{$courses[2]->lessons_bartender}}</span></li>
+                            <li class="list-group-item">Lessons-Waiter:<span class=""> {{$courses[2]->lessons_waiter}}</span></li>
                         </ul>
+                        <input type="hidden" name="courses_id" value="{{$courses[2]->id}}">
                         <button type="submit" class="btn btn-dark my-2">Choose for this pakket</button>
                     </div>
-                </a>
+                </form>
             </div>
+
             <!-- de vierde card -->
             <div class="col-sm-3 col-md-3">
-                <a href="#">
-                    <div class="card" style="width: 18rem;">
+                <form action="courses/subscribe" method="post">
+                    @csrf
+                    <div class="card">
                         <img src="{{ asset('images/chef.png') }}" style="height: 200px" class="img-fluid" alt="...">
                         <div class="card-body">
-                            <h3><input type="text" name="Chef" value="Chef" style="border:none;outline: none"></h3>
-                            <p class="card-text">Course for Bartender.</p>
+                            <h3>{{$courses[3]->name}}</h3>                            <p class="card-text">{{$courses[3]->description}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <br>
                             <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class="text-success"> 10</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class="text-success"> 2</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class="text-success"> 3</span></li>
+                            <li class="list-group-item">Lessons-Chef:<span class="text-success"> {{$courses[3]->lessons_chef}}</span></li>
+                            <li class="list-group-item">Lessons-Bartender<span class="text-success"> {{$courses[3]->lessons_bartender}}</span></li>
+                            <li class="list-group-item">Lessons-Waiter:<span class="text-success"> {{$courses[3]->lessons_waiter}}</span></li>
                         </ul>
-                        <button type="submit" class="btn btn-success my-2">Choose for this pakket</button>
+                        <input type="hidden" name="courses_id" value="{{$courses[3]->id}}">
+                        <button type="submit" class="btn btn-dark btn-success my-2">Choose for this package</button>
                     </div>
-                </a>
+                </form>
             </div>
-       </form>
         </div>
     </div>
-
-{{--    @endforeach--}}
 
 @endsection

@@ -27,7 +27,8 @@ class CoursesController extends Controller
             $request->validate([
                 'courses_id' => 'required',
             ]);
-            $data = DB::insert('insert into courses_subscribed (user_id, courses_id, created_at, updated_at) values (?, ?, ?, ?)', [auth()->id(),$request['courses_id'], date('Y-m-d H:i:s'), date('Y-m-d H:i:s')]);
+            $data = DB::insert('insert into courses_subscribed (user_id, courses_id, created_at, updated_at) values (?, ?, ?, ?)',
+                [auth()->id(),$request['courses_id'], date('Y-m-d H:i:s'), date('Y-m-d H:i:s')]);
 
             if($data == true){
 //              Hier komt de email te staan
@@ -37,3 +38,4 @@ class CoursesController extends Controller
         }
     }
 }
+

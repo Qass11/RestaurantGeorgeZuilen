@@ -10,7 +10,7 @@
 
         <li>
             <a class="nav-link {{ checkActive('app.courses.overview') }}" href="{{ route('app.courses.overview') }}">
-                <i class="fal fa-home fa-fw"></i> Courses
+                <i class="fal fa-box fa-fw"></i> Courses
             </a>
         </li>
 

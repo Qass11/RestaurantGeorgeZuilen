@@ -26,7 +26,7 @@ Route::post('contact', [ContactController::class, 'storeContact']);
 Route::get('careers', [CareerController::class, 'index'])->name('career');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('corona', [CoronaController::class, 'index'])->name('corona');
-Route::get('made', [MadeController::class, 'index'])->name('made');
+Route::get('-+', [MadeController::class, 'index'])->name('made');
 Route::get('gift', [GiftController::class, 'index'])->name('gift');
 Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');
 Route::match(array('get', 'post'), 'reservation', [ReservationController::class, 'index'])->name('reservation');

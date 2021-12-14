@@ -10,4 +10,6 @@ class Courses extends Model
     use HasFactory;
 
     protected $table = 'courses';
+
+    protected $guarded = [];
 }

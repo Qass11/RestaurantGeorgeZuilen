@@ -3,7 +3,11 @@
 
 @section('content')
     <div class="container border-bottom">
-        <table class="table">
+        <h1>Reservations</h1>
+        <p class="mb-3">
+            Below you can see an overview of all reservations made in the past period.
+        </p>
+        <table class="table table-striped table-hover align-middle">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -35,7 +39,19 @@
                         <td>{{ $reservation->advertising }}</td>
                     </tr>
                 @empty
-                    Nothing to show
+                    <tr>
+                        <th scope="row">#</th>
+                        <td>Nothing to show</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                 @endforelse
             </tbody>
         </table>

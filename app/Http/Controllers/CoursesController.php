@@ -16,8 +16,10 @@ class CoursesController extends Controller
 
     public function coursesOverview()
     {
-        $courses = DB::select('select * from courses');
-        return view('app.courses.overview', ['courses' => $courses]);
+        $courses = Courses::get()->all();
+        return view('app.courses.overview')->with([
+            'courses' => $courses,
+        ]);
     }
     public function coursesSubscribe(Request $request)
     {

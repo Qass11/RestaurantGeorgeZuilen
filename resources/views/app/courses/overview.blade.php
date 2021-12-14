@@ -65,9 +65,11 @@
     @elseif(auth()->user()->check_course == '1' && auth()->user()->user_types_id < '3')
         Kies hier je werkuren.
     @elseif(auth()->user()->user_types_id > '2' && auth()->user()->user_types_id < '6')
-        je bent een docent.
+        Qassim, hier de front-end voor de docenten om een werkdag te kiezen.
+    @elseif(auth()->user()->user_types_id > '1' && auth()->user()->user_types_id < '3')
+        Qassim, hier de front-end voor de studenten om een werkdag te kiezen.
     @else
-        Hier ben je niet welkom.
+        Dit vullen we later op.
     @endif
 
 @endsection

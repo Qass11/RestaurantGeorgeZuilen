@@ -2,6 +2,14 @@
 @section('pagename', 'Courses Overview')
 
 @section('content')
+    <div class="container no-border call-to-action">
+        <div class="call-to-action-menu-one">
+            <div class="text-place">
+                <h2>Our Courses</h2>
+            </div>
+        </div>
+    </div>
+
     <div class="container mt-3 pb-5">
         <h1 class="text-corona text-center">Courses</h1>
         <div class="row">

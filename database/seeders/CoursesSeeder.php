@@ -16,7 +16,7 @@ class CoursesSeeder extends Seeder
     {
         Courses::create([
             'name'                  => 'General',
-            'description'           => 'Course for General',
+            'description'           => 'Course to study to become a General-employee',
             'lessons_chef'          => '5',
             'lessons_bartender'     => '5',
             'lessons_waiter'        => '5',
@@ -24,7 +24,7 @@ class CoursesSeeder extends Seeder
 
         Courses::create([
             'name'                  => 'Bartender',
-            'description'           => 'Course for Bartender',
+            'description'           => 'Course to study to become a Bartender',
             'lessons_chef'          => '3',
             'lessons_bartender'     => '9',
             'lessons_waiter'        => '3',
@@ -32,7 +32,7 @@ class CoursesSeeder extends Seeder
 
         Courses::create([
             'name'                  => 'Waiter',
-            'description'           => 'Course for Waiter',
+            'description'           => 'Course to study to become a Waiter',
             'lessons_chef'          => '3',
             'lessons_bartender'     => '2',
             'lessons_waiter'        => '10',
@@ -40,7 +40,7 @@ class CoursesSeeder extends Seeder
 
         Courses::create([
             'name'                  => 'Chef',
-            'description'           => 'Course for Chef',
+            'description'           => 'Course to study to become a Chef',
             'lessons_chef'          => '10',
             'lessons_bartender'     => '2',
             'lessons_waiter'        => '3',

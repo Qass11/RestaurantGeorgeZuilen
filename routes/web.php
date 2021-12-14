@@ -35,7 +35,7 @@ Route::get('create_account', [AuthController::class, 'createRegister'])->name('r
 Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form
 Route::get('login', [AuthController::class, 'createLogin'])->name('login')->middleware('guest'); // Login page
 Route::post('login', [AuthController::class, 'storeLogin'])->middleware('guest'); // Send the login form
-Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); // Log out if logged in.
+Route::get('logout', [AuthController::class, 'destroy']);
 Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate'); // Activate page
 Route::post('activate/{uuid}', [AuthController::class, 'storeActivate'])->name('storeActivate'); // Send activate form.
 

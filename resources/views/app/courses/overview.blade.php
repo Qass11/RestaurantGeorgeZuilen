@@ -2,7 +2,7 @@
 @section('pagename', 'Courses Overview')
 
 @section('content')
-    <div class="container no-border call-to-action">
+    <div class="container no-border call-to-action mb-3">
         <div class="call-to-action-menu-one">
             <div class="text-place">
                 <h2>Our Courses</h2>
@@ -10,98 +10,50 @@
         </div>
     </div>
 
-    <div class="container mt-3 pb-5">
-        <h1 class="text-corona text-center">Courses</h1>
+    <div class="container">
         <div class="row">
-            <!-- de eertste card -->
-            <div class="col-sm-3 col-md-3">
-                <form action="courses/subscribe" method="post">
-                    @csrf
-                    <div class="card">
-                        <img src="{{ asset('images/general.jpg') }}" style="height: 200px" class="img-fluid" alt="...">
-                        <div class="card-body">
+            @forelse($courses as $course)
+                <div class="col-sm-12 col-md-6 course-overview">
+                    @if($course->name == "General")
+                        <i class="fal fa-utensils-alt fa-fw"></i>
+                    @elseif($course->name == "Bartender")
+                        <i class="fal fa-glass-whiskey-rocks fa-fw"></i>
+                    @elseif($course->name == "Waiter")
+                        <i class="fal fa-concierge-bell fa-fw"></i>
+                    @elseif($course->name == "Chef")
+                        <i class="fal fa-hat-chef fa-fw"></i>
+                    @endif
+                    <p class="title">{{ $course->name }}</p>
+                    <p class="description">{{ $course->description }}</p>
+                    <p class="info">
+                        Below is the breakdown in terms of the number
+                        of evenings with<br/> which lesson package you will be working.
+                    </p>
 
-                            <h3>{{$courses[0]->name}}</h3>
-                            <p class="card-text">{{ $courses[0]->description }}</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <br>
-                            <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class="text-primary"> {{ $courses[0]->lessons_chef }}</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class="text-primary"> {{$courses[0]->lessons_bartender}}</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class="text-primary"> {{$courses[0]->lessons_waiter}}</span></li>
-                        </ul>
-                        <input type="hidden" name="courses_id" value="{{$courses[0]->id}}">
-                        <button type="submit" class="btn btn-dark my-2">Choose for this pakket</button>
-                    </div>
-                </form>
-            </div>
+                    <div class="prices mb-3">
+                        <div class="row">
+                            <div class="col">
+                                <span>Chef</span>
+                                <span>{{ $course->lessons_chef }}</span>
+                            </div>
 
-            <!-- de tweede card -->
-            <div class="col-sm-3 col-md-3">
-                <form action="courses/subscribe" method="post">
-                    @csrf
-                    <div class="card">
-                        <img src="{{ asset('images/bartender.jpg') }}" style="height: 200px" class="img-fluid" alt="...">
-                        <div class="card-body">
-                            <h3>{{$courses[1]->name}}</h3>                            <p class="card-text">{{$courses[1]->description}}</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <br>
-                            <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class="text-danger">{{$courses[1]->lessons_chef}}</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class="text-danger"> {{$courses[1]->lessons_bartender}}</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class="text-danger"> {{$courses[1]->lessons_waiter}}</span></li>
-                        </ul>
-                        <input type="hidden" name="courses_id" value="{{$courses[1]->id}}">
-                        <button type="submit" class="btn btn-dark my-2">Choose for this pakket</button>
-                    </div>
-                </form>
-            </div>
+                            <div class="col">
+                                <span>Bartender</span>
+                                <span>{{ $course->lessons_bartender }}</span>
+                            </div>
 
-            <!-- de derde card -->
-            <div class="col-sm-3 col-md-3">
-                <form action="courses/subscribe" method="post">
-                    @csrf
-                    <div class="card">
-                        <img src="{{ asset('images/waiter.jpg') }}" class="img-fluid"  style="height: 200px" alt="...">
-                        <div class="card-body">
-                            <h3>{{$courses[2]->name}}</h3>                            <p class="card-text">{{$courses[2]->description}}</p>
+                            <div class="col">
+                                <span>Waiter</span>
+                                <span>{{ $course->lessons_waiter }}</span>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <br>
-                            <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class=""> {{$courses[2]->lessons_chef}}</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class=""> {{$courses[2]->lessons_bartender}}</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class=""> {{$courses[2]->lessons_waiter}}</span></li>
-                        </ul>
-                        <input type="hidden" name="courses_id" value="{{$courses[2]->id}}">
-                        <button type="submit" class="btn btn-dark my-2">Choose for this pakket</button>
                     </div>
-                </form>
-            </div>
 
-            <!-- de vierde card -->
-            <div class="col-sm-3 col-md-3">
-                <form action="courses/subscribe" method="post">
-                    @csrf
-                    <div class="card">
-                        <img src="{{ asset('images/chef.png') }}" style="height: 200px" class="img-fluid" alt="...">
-                        <div class="card-body">
-                            <h3>{{$courses[3]->name}}</h3>                            <p class="card-text">{{$courses[3]->description}}</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <br>
-                            <h5 class="text-center">Aantal avonden:</h5>
-                            <li class="list-group-item">Lessons-Chef:<span class="text-success"> {{$courses[3]->lessons_chef}}</span></li>
-                            <li class="list-group-item">Lessons-Bartender<span class="text-success"> {{$courses[3]->lessons_bartender}}</span></li>
-                            <li class="list-group-item">Lessons-Waiter:<span class="text-success"> {{$courses[3]->lessons_waiter}}</span></li>
-                        </ul>
-                        <input type="hidden" name="courses_id" value="{{$courses[3]->id}}">
-                        <button type="submit" class="btn btn-dark btn-success my-2">Choose for this package</button>
-                    </div>
-                </form>
-            </div>
+                    <button type="submit" class="btn btn-sm btn-outline-dark">Choose for this course</button>
+                </div>
+            @empty
+                Nothing to show.
+            @endforelse
         </div>
     </div>
 

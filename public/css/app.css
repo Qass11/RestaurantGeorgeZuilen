@@ -922,3 +922,51 @@ ul.footer-links li a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.course-overview {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  margin-bottom: 30px;
+}
+.course-overview i {
+  display: block;
+  font-size: 30px;
+  margin: 0 auto 5px auto;
+}
+.course-overview p {
+  margin: 0;
+  padding: 0;
+}
+.course-overview p.title {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+  font-size: 25px;
+}
+.course-overview p.description {
+  font-family: "Lora", serif;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+.course-overview p.info {
+  font-family: "Lora", serif;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+.course-overview .prices .row {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Lora", serif;
+}
+.course-overview .prices .row .col {
+  padding: 10px;
+}
+.course-overview .prices .row .col span {
+  display: block;
+}
+.course-overview .prices .row .col span:first-child {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12.5px;
+}

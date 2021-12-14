@@ -2,11 +2,14 @@
 @section('pagename', 'Reservations Overview')
 
 @section('content')
+    <div class="container no-border call-to-action">
+        <div class="call-to-action-menu-one">
+            <div class="text-place">
+                <h2>Our Reservations</h2>
+            </div>
+        </div>
+    </div>
     <div class="container border-bottom">
-        <h1>Reservations</h1>
-        <p class="mb-3">
-            Below you can see an overview of all reservations made in the past period.
-        </p>
         <table class="table table-striped table-hover align-middle">
             <thead>
                 <tr>

@@ -3,6 +3,14 @@
 
 @section('content')
     @if(auth()->user()->user_types_id > '2')
+        <div class="container no-border call-to-action">
+            <div class="call-to-action-menu-one">
+                <div class="text-place">
+                    <h2>Our Students</h2>
+                </div>
+            </div>
+        </div>
+
         <div class="container border-bottom">
             <h1>Students</h1>
             <table class="table table-striped table-hover align-middle">
@@ -44,12 +52,15 @@
         </div>
     @endif
 
+    <div class="container no-border call-to-action">
+        <div class="call-to-action-menu-one">
+            <div class="text-place">
+                <h2>Our Employees</h2>
+            </div>
+        </div>
+    </div>
+
     <div class="container border-bottom">
-        <h1>Employees</h1>
-        <p class="mb-3">
-            Below you will see all available tutors within your program, within this form you can use the action
-            button to send an email directly to an available tutor.
-        </p>
         <table class="table table-striped table-hover align-middle">
             <thead>
             <tr>

@@ -24,5 +24,11 @@
                 <i class="fal fa-users fa-fw"></i> Users
             </a>
         </li>
+
+        <li>
+            <a class="nav-link" href="{{ route('logout') }}">
+                <i class="fal fa-sign-out fa-fw"></i> Logout
+            </a>
+        </li>
     </ul>
 </div>

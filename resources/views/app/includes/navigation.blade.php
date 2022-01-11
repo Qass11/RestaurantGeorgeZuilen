@@ -7,11 +7,21 @@
             </a>
         </li>
 
+        @if(auth()->user()->user_types_id == '2')
         <li>
             <a class="nav-link {{ checkActive('app.courses.overview') }}" href="{{ route('app.courses.overview') }}">
                 <i class="fal fa-box fa-fw"></i> My Course
             </a>
         </li>
+
+        @elseif(auth()->user()->user_types_id > '2')
+            <li>
+                <a class="nav-link {{ checkActive('app.courses.subscribe') }}" href="{{ route('app.courses.subscribe') }}">
+                    <i class="fal fa-box fa-fw"></i> Asssessment
+                </a>
+            </li>
+        @endif
+
 
         <li>
             <a class="nav-link {{ checkActive('app.reservations.overview') }}" href="{{ route('app.reservations.overview') }}">

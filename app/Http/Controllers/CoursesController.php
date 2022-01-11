@@ -40,5 +40,10 @@ class CoursesController extends Controller
 
             return redirect('')->with('success', 'You have chosen a course.');
         }
+
+        elseif (\auth()->user()->user_types_id > 2){
+            $emails = User::where('user_types_id', 2)->get('email')->all();
+            return view('app.courses.subscribe')->with(['emails' => $emails]);
+        }
     }
 }

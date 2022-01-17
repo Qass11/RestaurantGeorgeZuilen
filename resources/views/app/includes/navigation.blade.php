@@ -13,7 +13,7 @@
                 <i class="fal fa-box fa-fw"></i> My Course
             </a>
         </li>
-
+{{--Alleen de docent een Assesment icon kan krijgen in de navbar --}}
         @elseif(auth()->user()->user_types_id > '2')
             <li>
                 <a class="nav-link {{ checkActive('app.courses.subscribe') }}" href="{{ route('app.courses.subscribe') }}">

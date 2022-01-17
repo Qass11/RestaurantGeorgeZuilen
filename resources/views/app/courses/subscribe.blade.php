@@ -2,7 +2,7 @@
 @section('pagename', 'Courses Subscribe')
 
 @section('content')
-    
+{{--    Dit is het form van Feedback text--}}
         <div class="container border-bottom">
             <div class="row">
                 <div class="col-sm-12 col-md-5">
@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 ms-auto">
-
+{{--melding bij het versturen--}}
                     @if (session()->has('success'))
                         <div class="success">
                             <strong>Yeey! <i class="far fa-smile-beam fa-fw"></i></strong>
@@ -28,7 +28,7 @@
                         
 
                         @csrf
-
+{{--Student Email kiezen , meer informatie kijk in CoursesController onderin--}}
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-floating mb-3">

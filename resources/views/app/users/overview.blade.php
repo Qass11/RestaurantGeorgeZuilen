@@ -2,6 +2,7 @@
 @section('pagename', 'Users Overview')
 
 @section('content')
+    <!-- De ingelogde gebruiker controleren over welke type die beschikt, zodat je enkel specifieke informatie aan die type kan tonen. In dit geval de STUDENT, deze mag deze informatie namelijk niet inzien. -->
     @if(auth()->user()->user_types_id > '2')
         <div class="container no-border call-to-action">
             <div class="call-to-action-menu-one">
@@ -26,6 +27,7 @@
                 </tr>
                 </thead>
                 <tbody>
+                <!-- De opgehaalde data uit de back-end tonen in de front-end met de tag $students, die we omzetten naar $student. Dit is enkel te zien voor employees. -->
                 @forelse($students as $student)
                     <tr>
                         <th scope="row">{{ $student->id }}</th>
@@ -36,6 +38,7 @@
                         <td>{{ $student->created_at }}</td>
                         <td><a class="btn btn-primary btn-sm" href="mailto:{{ $student->email }}" role="button">Send e-mail</a></td>
                     </tr>
+                <!-- Als er geen data te vinden is in de database, dan zegt de front-end dat er niks gevonden is. -->     
                 @empty
                     <tr>
                         <th scope="row">#</th>
@@ -73,6 +76,7 @@
             </tr>
             </thead>
             <tbody>
+            <!-- De opgehaalde data uit de back-end tonen in de front-end met de tag $employees, die we omzetten naar $employee. Dit is voor iedereen te zien. -->
             @forelse($employees as $employee)
                 <tr>
                     <th scope="row">{{ $employee->id }}</th>
@@ -82,6 +86,7 @@
                     <td>{{ $employee->created_at }}</td>
                     <td><a class="btn btn-primary btn-sm" href="mailto:{{ $employee->email }}" role="button">Send e-mail</a></td>
                 </tr>
+            <!-- Als er geen data te vinden is in de database, dan zegt de front-end dat er niks gevonden is. -->    
             @empty
                 <tr>
                     <th scope="row">#</th>

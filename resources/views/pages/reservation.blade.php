@@ -12,7 +12,7 @@
     </div>
 
     <div class="container border-bottom">
-
+{{--        Als de bezoeker heeft gereserveerd dan krijgt hij te zien dat het gelukt is--}}
         @if (session()->has('success'))
             <div class="success">
                 <strong>Yeey! <i class="far fa-smile-beam fa-fw"></i></strong>

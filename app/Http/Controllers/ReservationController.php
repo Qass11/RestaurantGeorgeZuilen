@@ -29,7 +29,7 @@ class ReservationController extends Controller
             ]);
 
             /*
-             * Retourneert een tekenreeks die is opgemaakt.
+             * Dit zorgt er voor dat de ingestuurde datum in de goede Nederlandse manier word verstuurd naar de database: Dag-Maand-Jaar.
              */
             $attributes['date'] = date('d-m-Y', strtotime($attributes['date']));
 
@@ -37,7 +37,8 @@ class ReservationController extends Controller
             $reservation->notify(new sendReservationNotification($reservation));
 
             /*
-             * De reservation button om door te gaan.
+             * Zodra de hier check goed uitgevoerd is en da data naar de database is verstuurd en de opdracht is gegeven
+             * dat automatische e-mail naar de klant wordt verstuurd, dan wordt de klant  naar de reservering page verstuurd.
              */
             return redirect('/reservation')->with('success', 'Your reservation has been successfully processed, you will receive a confirmation by email.');
         }

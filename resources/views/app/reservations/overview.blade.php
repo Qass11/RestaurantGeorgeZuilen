@@ -38,9 +38,7 @@
                         <td>{{ $reservation->advertising }}</td>
                     </tr>
                 @empty
-<<<<<<< Updated upstream
-                    Nothing to show
-=======
+
 {{--                    Als boven opgehaald is en niks te zien is dan zegt dat het niks te zien--}}
                     <tr>
                         <th scope="row">#</th>
@@ -55,7 +53,6 @@
                         <td></td>
                         <td></td>
                     </tr>
->>>>>>> Stashed changes
                 @endforelse
             </tbody>
         </table>

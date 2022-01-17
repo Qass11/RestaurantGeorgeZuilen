@@ -23,6 +23,7 @@ return new class extends Migration
             $table->dateTime('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone_number');
+            $table->string('check_course')->default(0);
             $table->timestamps();
         });
     }

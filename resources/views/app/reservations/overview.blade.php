@@ -2,8 +2,15 @@
 @section('pagename', 'Reservations Overview')
 
 @section('content')
+    <div class="container no-border call-to-action">
+        <div class="call-to-action-menu-one">
+            <div class="text-place">
+                <h2>Our Reservations</h2>
+            </div>
+        </div>
+    </div>
     <div class="container border-bottom">
-        <table class="table">
+        <table class="table table-striped table-hover align-middle">
             <thead>
 {{--            De kolomen dat de klant zijn gegevens invult--}}
                 <tr>
@@ -39,7 +46,9 @@
                     </tr>
                 @empty
 
+
 {{--                    Als boven opgehaald is en niks te zien is dan zegt dat het niks te zien--}}
+
                     <tr>
                         <th scope="row">#</th>
                         <td>Nothing to show</td>

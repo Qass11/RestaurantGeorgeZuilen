@@ -29,7 +29,6 @@ class ContactController extends Controller
         $contact = Contact::create($attributes);
         $contact->notify(new sendCopyContactNotification($contact));
         $contact->notify(new sendContactNotification($contact, $email));
-
         return redirect('/contact')->with('success', 'The completed form has been sent to the team of George Zuilen.');
     }
 }

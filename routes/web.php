@@ -26,7 +26,7 @@ Route::post('contact', [ContactController::class, 'storeContact']);
 Route::get('careers', [CareerController::class, 'index'])->name('career');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('corona', [CoronaController::class, 'index'])->name('corona');
-Route::get('made', [MadeController::class, 'index'])->name('made');
+Route::get('developer', [MadeController::class, 'index'])->name('made');
 Route::get('gift', [GiftController::class, 'index'])->name('gift');
 Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');
 Route::match(array('get', 'post'), 'reservation', [ReservationController::class, 'index'])->name('reservation');
@@ -35,7 +35,7 @@ Route::get('create_account', [AuthController::class, 'createRegister'])->name('r
 Route::post('create_account', [AuthController::class, 'storeRegister'])->middleware('guest'); // Send the register form
 Route::get('login', [AuthController::class, 'createLogin'])->name('login')->middleware('guest'); // Login page
 Route::post('login', [AuthController::class, 'storeLogin'])->middleware('guest'); // Send the login form
-Route::post('logout', [AuthController::class, 'destroy'])->middleware('auth'); // Log out if logged in.
+Route::get('logout', [AuthController::class, 'destroy'])->name('logout');
 Route::get('activate/{uuid}', [AuthController::class, 'createActivate'])->name('createActivate'); // Activate page
 Route::post('activate/{uuid}', [AuthController::class, 'storeActivate'])->name('storeActivate'); // Send activate form.
 

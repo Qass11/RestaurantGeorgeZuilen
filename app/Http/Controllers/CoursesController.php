@@ -20,15 +20,16 @@ class CoursesController extends Controller
     {
 //        hier worden de alle courses data uit de database gehaald
         $courses = Courses::get()->all();
-//        hier wordt naar de courses terug gestuurd
+//        De back-end word doorgestuurd naar de front-end, deze kunnen opgehaald worden in de front-end met de tag $courses.
         return view('app.courses.overview')->with([
             'courses' => $courses,
         ]);
     }
     public function coursesSubscribe(Request $request)
     {
-//        hier wordt de data van de form naar hier gestuurd
-//        deze gevraagde data moeten aanwezig tijdens het doorsturen van de form
+//        Wanneer de gebruiker op de submit button klikt, word het formulier doorgestuurd met de POST method,
+//        via onderstaande code word er gekeken of de attributen die meegegeven zijn ook daadwerkelijk ingevuld zijn,
+//        door required.
         if($request->isMethod('post')) {
             $attributes = request()->validate([
                 'user_id' => ['required'],

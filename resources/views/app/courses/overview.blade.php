@@ -71,7 +71,8 @@
 {{--        Als de veld check_course op 1 staat dan krijgt de gebruiker het volgende te zien--}}
     @elseif(auth()->user()->check_course == '1' && auth()->user()->user_types_id < '3')
         Kies hier je werkuren.
-{{--        Als iemand heeft niet ingelogd als student dan krijgt hij het volgende te zien--}}
+{{--        Wanneer de gebruiker een docent, begeleider of eigenaar is, dan krijgt hij bovenstaande informatie niet te zien,
+    hij ziet dan enkel de informatie die voor hem bestemd is. Dit is NIET zichtbaar voor studenten.--}}
     @elseif(auth()->user()->user_types_id > '2' && auth()->user()->user_types_id < '6')
         je bent een docent.
     @else

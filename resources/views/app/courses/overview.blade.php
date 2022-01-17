@@ -2,6 +2,7 @@
 @section('pagename', 'Courses Overview')
 
 @section('content')
+{{--            hier wordt de gekijken of de student heeft niet een pakket gekozen en of hij echt als student ingelogd--}}
     @if(auth()->user()->check_course == '0' && auth()->user()->user_types_id < '3')
         <div class="container no-border call-to-action mb-3">
             <div class="call-to-action-menu-one">
@@ -13,6 +14,7 @@
 
         <div class="container">
             <div class="row">
+{{--                hier wordt de data uit de database gehaald en icons for elke type user gezet--}}
                 @forelse($courses as $course)
                     <div class="col-sm-12 col-md-6 course-overview">
                         @if($course->name == "General")
@@ -24,6 +26,7 @@
                         @elseif($course->name == "Chef")
                             <i class="fal fa-hat-chef fa-fw"></i>
                         @endif
+{{--                        daarna halen wij uit de database de courses name en description--}}
                         <p class="title">{{ $course->name }}</p>
                         <p class="description">{{ $course->description }}</p>
                         <p class="info">
@@ -31,6 +34,7 @@
                             of evenings with<br/> which lesson package you will be working.
                         </p>
 
+{{--                            hier wordt de aantal uren van elke pakket uit de database behaald--}}
                         <div class="prices mb-3">
                             <div class="row">
                                 <div class="col">
@@ -50,6 +54,7 @@
                             </div>
                         </div>
 
+{{--                            hier sturen wij de form met post method naar subscribe paginas--}}
                         <form action="courses/subscribe" method="post">
                             @csrf
                             <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
@@ -57,13 +62,16 @@
                             <button type="submit" class="btn btn-sm btn-outline-dark">Choose for this course</button>
                         </form>
                     </div>
+{{--                    als de database is leeg en geen enkele veld toegevoegd dan krijgt de gebruiker dat te zien--}}
                 @empty
                     Nothing to show.
                 @endforelse
             </div>
         </div>
+{{--        Als de veld check_course op 1 staat dan krijgt de gebruiker het volgende te zien--}}
     @elseif(auth()->user()->check_course == '1' && auth()->user()->user_types_id < '3')
         Kies hier je werkuren.
+{{--        Als iemand heeft niet ingelogd als student dan krijgt hij het volgende te zien--}}
     @elseif(auth()->user()->user_types_id > '2' && auth()->user()->user_types_id < '6')
         je bent een docent.
     @else

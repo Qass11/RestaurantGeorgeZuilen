@@ -363,3 +363,62 @@ ul.footer-links {
     height: 250px;
     object-fit: cover;
 }
+
+.course-overview {
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin-bottom: 30px;
+
+    i {
+        display: block;
+        font-size: 30px;
+        margin: 0 auto 5px auto;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+
+        &.title {
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin: 0 0 5px 0;
+            font-size: 25px;
+        }
+
+        &.description {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            margin: 0 0 10px 0;
+        }
+
+        &.info {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            margin: 0 0 10px 0;
+        }
+    }
+
+    .prices {
+        .row {
+            width: 90%;
+            margin: 0 auto;
+            font-family: 'Lora', serif;
+
+            .col {
+                padding: 10px;
+
+                span {
+                    display: block;
+
+                    &:first-child {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 12.5px;
+                    }
+                }
+            }
+        }
+    }
+}

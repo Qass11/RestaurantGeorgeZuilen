@@ -11,6 +11,9 @@ class ReservationController extends Controller
 {
     public function index(Request $request)
     {
+        /*
+         * Als de klant op de button klikt dan maak je het verzoek om alles te vullen.
+         */
         if($request->isMethod('post')) {
             $attributes = request()->validate([
                 'type'              => ['required'],
@@ -25,14 +28,22 @@ class ReservationController extends Controller
                 'advertising'       => ['required'],
             ]);
 
+            /*
+             * Retourneert een tekenreeks die is opgemaakt.
+             */
             $attributes['date'] = date('d-m-Y', strtotime($attributes['date']));
 
             $reservation = Reservation::create($attributes);
             $reservation->notify(new sendReservationNotification($reservation));
 
+            /*
+             * De reservation button om door te gaan.
+             */
             return redirect('/reservation')->with('success', 'Your reservation has been successfully processed, you will receive a confirmation by email.');
         }
-
+        /*
+         * Front-end pagina maken voor gebruiker, zodat deze de gemaakte view kan zien.
+         */
         return view('pages.reservation');
     }
 }

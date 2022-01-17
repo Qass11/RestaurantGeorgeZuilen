@@ -5,6 +5,7 @@
     <div class="container border-bottom">
         <table class="table">
             <thead>
+{{--            De kolomen dat de klant zijn gegevens invult--}}
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">type</th>
@@ -20,6 +21,8 @@
                 </tr>
             </thead>
             <tbody>
+
+{{--            Dit haalt de gegevens uit de database--}}
                 @forelse($reservations as $reservation)
                     <tr>
                         <th scope="row">{{ $reservation->id }}</th>
@@ -35,7 +38,24 @@
                         <td>{{ $reservation->advertising }}</td>
                     </tr>
                 @empty
+<<<<<<< Updated upstream
                     Nothing to show
+=======
+{{--                    Als boven opgehaald is en niks te zien is dan zegt dat het niks te zien--}}
+                    <tr>
+                        <th scope="row">#</th>
+                        <td>Nothing to show</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+>>>>>>> Stashed changes
                 @endforelse
             </tbody>
         </table>

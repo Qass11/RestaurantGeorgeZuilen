@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class AppController extends Controller
 {
     /*
-    *   Controleer of de gebruiker daadwerkelijk is ingelogd, ben je dit niet word je terug gestuurd naar de algemene website. Dit omdat je dan geen toegang hebt.  
+     * Controleer of de gebruiker daadwerkelijk is ingelogd, ben je dit niet word je terug gestuurd naar de algemene website.
+     * Dit omdat je dan geen toegang hebt.
     */
     public function __construct()
     {

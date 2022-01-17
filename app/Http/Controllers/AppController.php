@@ -49,11 +49,12 @@ class AppController extends Controller
     public function usersOverview()
     {
         /*
-        *   Haal specifiek alleen de studenten op, deze beschikken over de type 2. 
+        *   Haal specifiek alleen de studenten op, deze beschikken over de type 2, andere types worden hierin niet meegenomen.
         */
         $students = User::where('user_types_id', 2)->get()->all();
         /*
-        *   Haal specifiek alleen de medewerkers op, deze beschikken over de types 3, 4 en 5.  
+        *   Haal specifiek alleen de medewerkers op, deze beschikken over de types 3, 4 en 5.
+        *   We doen dit met een whereIn omdat we kijken naar meerdere user_types_id.
         */
         $employees = User::whereIn('user_types_id', [3, 4, 5])->get()->all();
 

@@ -6,7 +6,7 @@
         <div class="container border-bottom">
             <div class="row">
                 <div class="col-sm-12 col-md-5">
-                    <h2>Information</h2>
+                    <h2>feedback</h2>
                     <p>
                         It is always possible that you have questions or comments regarding Restaurant George Zuilen. We are always open to contact us, you can do this by using the contact options on our website or fill out the form on the right. We do our best to contact you within two working days after completing the form.
                     </p>
@@ -24,20 +24,28 @@
                         </div>
                     @endif
 
-                    <form action="/message" method="POST">
+                    <form action="/app" method="POST">
+                        
+
                         @csrf
 
                         <div class="row">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="email" value="{{ old('email') }}" aria-describedby="emailHelp" required>
-                                    <label for="floatingInput">E-mail address</label>
-
-                                    @error('email')
-                                    <div id="emailHelp" class="form-text color-red">
+                                    <select class="form-select @error('type') is-invalid @enderror" id="type" name="type" required>
+                                        @forelse($emails as $email)
+                                            <option>{{ $email }}</option>
+                                        @empty <option>no think to show</option>
+                                        @endforelse
+                                    </select>
+                                    <label for="bookType">Type of email</label>
+                                    @error('type')
+                                    <div id="typeHelp" class="form-text color-red">
                                         {{ $message }}
                                     </div>
                                     @enderror
                                 </div>
+                            </div>
                             </div>
 
 
